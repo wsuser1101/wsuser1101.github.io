@@ -1,59 +1,31 @@
 ---
-title: Introduction
+title: Home
 hide:
   - toc
 ---
 
 <div class="hero" markdown>
 
-# W4Studica
+# VMX on WPI
 
-**2027 WPILib on the Studica VMX-pi.** A community project, currently in beta.
+**Use WPILib 2026 on the Studica VMX-pi.** This project provides a VMX-pi HAL, a GradleRIO deploy target, a VS Code extension, and a robot manager for 64-bit Ubuntu.
 
-[Get started](guides/vmx-pi/vmx-pi-setup.md){ .md-button .md-button--primary }
-[C++ API](https://w4studica.github.io/apidocs/){ .md-button }
-[GitHub](https://github.com/W4Studica){ .md-button }
-
-</div>
-
-<div class="grid cards" markdown>
-
-- :material-language-cpp: **Write C++ on your PC**
-
-    Build with GradleRIO and deploy to the VMX-pi over the network with `./gradlew deploy`.
-
-- :material-chip: **WPILib classes on VMX hardware**
-
-    Digital I/O, analog input, encoders, PWM and the IMU work through WPILib classes. Studica devices such as the Titan use Studica's API with W4Studica helper classes.
-
-- :material-shield-check: **Titan safety**
-
-    The enable guard turns the Titan off when the robot is disabled, E-stopped, or the program stops.
-
-- :material-lan-connect: **Wired or Wi-Fi**
-
-    Connect by cable or through the VMX-pi's own Wi-Fi hotspot, the way you would at a competition.
+[Get started](vmxonwpi/guides/vmx-pi/vmx-pi-setup.md){ .md-button .md-button--primary }
+[VMX2026 extension](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases){ .md-button }
+[VMXONWPI on GitHub](https://github.com/VMXONWPI){ .md-button }
 
 </div>
 
-## Why we started
+## Choose a project
 
-Studica has ended support for its WPILib 2020 environment. VMX-pi teams needed a way to use a newer WPILib release without staying on the old setup.
+### VMX on WPI — WPILib 2026
 
-Instead of writing every hardware driver again, this project uses the driver code Studica uses with ROS 2 to connect VMX-pi hardware. Reusing that code reduces duplicate work and keeps device support together, making it easier to maintain. W4Studica connects those drivers to WPILib so teams can keep a familiar way to write and deploy robot code.
+Use the VMX2026 extension to connect a standard WPILib project to the VMX-pi target. C++ and Java robot projects are supported. The robot runs 64-bit Ubuntu and uses NetworkManager-based networking and the `robot_manager` service.
 
-## How it works
+[Setup and deploy a WPILib 2026 project →](vmxonwpi/guides/vmx-pi/software-install.md)
 
-Write and build C++ robot code on a PC, then deploy it to the VMX-pi with GradleRIO. On the VMX-pi, a W4Studica extension connects WPILib to the hardware drivers.
+### W4Studica — WPILib 2027
 
-## Current status
+The W4Studica section documents a separate 2027 beta project and its own extension, HAL, and workflow. Instructions there do not apply to VMX on WPI 2026.
 
-!!! info "Beta, based on 2027.0.0-alpha-7"
-
-    C++ build and deployment, digital I/O, analog input, encoders, IMU yaw and Titan control have been checked on a VMX-pi.
-
-!!! warning "Not tested or not available yet"
-
-    PWM and servo output and battery voltage are in this beta but have not been tested on a robot. IMU roll, pitch and Z-rate directions still need verification. WPILib I2C, DutyCycle and IMU quaternion output are not available, and Java robot programs are not supported. See [Hardware Support](guides/vmx-pi/hardware-support.md).
-
-We are documenting what works and expanding support over time. W4Studica is a community project and is not an official Studica or WPILib distribution.
+[Open W4Studica documentation →](W4Studica/index.md)

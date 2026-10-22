@@ -23,7 +23,7 @@ def quoted(value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--allwpilib", type=Path, default=ROOT.parent / "allwpilib")
-    parser.add_argument("--output", type=Path, default=ROOT / "site/apidocs")
+    parser.add_argument("--output", type=Path, default=ROOT / "site/W4Studica/apidocs")
     parser.add_argument("--doxygen", default="doxygen")
     args = parser.parse_args()
     source = args.allwpilib.resolve()

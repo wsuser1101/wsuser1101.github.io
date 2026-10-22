@@ -1,13 +1,15 @@
-# W4Studica documentation
+# VMX on WPI and W4Studica documentation
 
-MkDocs builds the guides at `/`. Doxygen Awesome **Base** builds a standalone
-C++ API reference at `/apidocs/`, with its own class tree, symbol search, source
-browser and light/dark toggle. The MkDocs theme does not wrap the API pages.
+The home page introduces both projects. The **VMX on WPI** guides live under
+`/vmxonwpi/` and cover WPILib 2026, the VMX2026 extension, and the Ubuntu-based
+robot setup. The separate **W4Studica** guides live under `/W4Studica/` and cover
+their WPILib 2027 beta. Their setup steps, extensions, and release streams are
+different; do not treat either guide as a copy of the other.
 
-The site introduction is available in English at `/` and Korean at `/ko/`.
-Place translated pages in the corresponding `docs/en/` and `docs/ko/` folders.
-The standard Material language selector switches between matching page
-translations. API reference and GitHub links are in the navigation.
+Doxygen builds the W4Studica C++ API reference at `/W4Studica/apidocs/`. It is
+not duplicated under VMX on WPI because that API is for the separate W4Studica
+2027 codebase. English and Korean pages are in matching `docs/en/` and `docs/ko/`
+folders; the Material language selector switches between page translations.
 
 The API source commit and displayed version are pinned in `apidocs/source.json`.
 Inputs are WPILib public headers, Studica driver headers and W4Studica VMX
@@ -26,7 +28,8 @@ python scripts/build_apidocs.py --allwpilib ../allwpilib
 python -m http.server 8000 --directory site --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8000/apidocs/`. Rebuilding MkDocs clears `site/`, so always
+Open `http://127.0.0.1:8000/` for the portal or
+`http://127.0.0.1:8000/W4Studica/apidocs/` for the W4Studica API. Rebuilding MkDocs clears `site/`, so always
 run the API builder afterward. Generated HTML is ignored by Git. Parser warnings
 are saved to `.site/apidocs-warnings.log`, outside the public site. The builder
 checks required pages, theme checksums and accidental local paths before replacing

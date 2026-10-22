@@ -1,11 +1,11 @@
-site_name: W4Studica
-site_url: https://w4studica.github.io/
-site_description: A community project bringing 2027 WPILib to the Studica VMX-pi.
+site_name: VMX on WPI
+site_url: https://wsuser1101.github.io/
+site_description: WPILib 2026 and VMX-pi setup, development, and deployment guides.
 
 theme:
   name: material
-  logo: assets/w4studica-icon.svg
-  favicon: assets/w4studica-icon.png
+  logo: assets/vmxonwpi.svg
+  favicon: assets/vmxonwpi.svg
   language: en
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -28,20 +28,36 @@ extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - Introduction: index.md
-  - Documentation:
-      - VMX-Pi Setup: guides/vmx-pi/vmx-pi-setup.md
-      - VMX-Pi Network: guides/vmx-pi/vmx-pi-network.md
-      - Software Install: guides/vmx-pi/software-install.md
-      - VS Code Setup: guides/vmx-pi/vscode-setup.md
-      - Adding W4Studica Libraries: guides/vmx-pi/adding-w4studica-libraries.md
-      - Start Robot Coding: guides/vmx-pi/start-robot-coding.md
-      - Hardware Support: guides/vmx-pi/hardware-support.md
-      - Troubleshooting: guides/vmx-pi/troubleshooting.md
-      - WPILib Official Documentation: https://docs.wpilib.org/en/2027/
-      - Studica Official Documentation: https://learn.studica.com/
-  - C++ API: https://w4studica.github.io/apidocs/
-  - GitHub: https://github.com/W4Studica
+  - Home: index.md
+  - W4Studica (WPILib 2027):
+      - Introduction: W4Studica/index.md
+      - Documentation:
+          - VMX-Pi Setup: W4Studica/guides/vmx-pi/vmx-pi-setup.md
+          - VMX-Pi Network: W4Studica/guides/vmx-pi/vmx-pi-network.md
+          - Software Install: W4Studica/guides/vmx-pi/software-install.md
+          - VS Code Setup: W4Studica/guides/vmx-pi/vscode-setup.md
+          - Adding W4Studica Libraries: W4Studica/guides/vmx-pi/adding-w4studica-libraries.md
+          - Start Robot Coding: W4Studica/guides/vmx-pi/start-robot-coding.md
+          - Hardware Support: W4Studica/guides/vmx-pi/hardware-support.md
+          - Troubleshooting: W4Studica/guides/vmx-pi/troubleshooting.md
+          - WPILib Official Documentation: https://docs.wpilib.org/en/2027/
+          - Studica Official Documentation: https://learn.studica.com/
+      - C++ API: /W4Studica/apidocs/
+  - VMX on WPI (WPILib 2026):
+      - Introduction: vmxonwpi/index.md
+      - Documentation:
+          - VMX-Pi Setup: vmxonwpi/guides/vmx-pi/vmx-pi-setup.md
+          - VMX-Pi Network: vmxonwpi/guides/vmx-pi/vmx-pi-network.md
+          - Install WPILib and VMX2026: vmxonwpi/guides/vmx-pi/software-install.md
+          - VS Code Setup: vmxonwpi/guides/vmx-pi/vscode-setup.md
+          - Connect a Project to VMX-Pi: vmxonwpi/guides/vmx-pi/vmx2026-setup.md
+          - Start Robot Coding: vmxonwpi/guides/vmx-pi/start-robot-coding.md
+          - Hardware Support: vmxonwpi/guides/vmx-pi/hardware-support.md
+          - Troubleshooting: vmxonwpi/guides/vmx-pi/troubleshooting.md
+          - WPILib Official Documentation: https://docs.wpilib.org/en/2026/
+          - VMXONWPI GitHub: https://github.com/VMXONWPI
+      - VMX2026 Extension Releases: https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases
+  - GitHub: https://github.com/VMXONWPI
 
 markdown_extensions:
   - admonition
@@ -68,8 +84,8 @@ plugins:
           name: English
           default: true
           build: true
-          site_name: W4Studica
-          site_description: A community project bringing 2027 WPILib to the Studica VMX-pi.
+          site_name: VMX on WPI
+          site_description: WPILib 2026 and VMX-pi setup, development, and deployment guides.
         - locale: ko
           name: 한국어
           build: true
@@ -86,19 +102,22 @@ plugins:
                 toggle:
                   icon: material/weather-sunny
                   name: 밝은 모드로 전환
-          site_name: W4Studica
-          site_description: Studica VMX-pi에서 2027 WPILib을 사용하기 위한 커뮤니티 프로젝트.
+          site_name: VMX on WPI
+          site_description: VMX-Pi에서 WPILib 2026을 설정하고 개발·배포하는 안내입니다.
           nav_translations:
+            Home: 홈
+            W4Studica (WPILib 2027): W4Studica (WPILib 2027)
+            VMX on WPI (WPILib 2026): VMX on WPI (WPILib 2026)
             Introduction: 소개
             Documentation: 문서
             VMX-Pi Setup: VMX-Pi 설정
             VMX-Pi Network: VMX-Pi 네트워크
-            Software Install: 소프트웨어 설치
+            Install WPILib and VMX2026: WPILib 및 VMX2026 설치
             VS Code Setup: VS Code 설정
-            Adding W4Studica Libraries: W4Studica 라이브러리 추가
+            Connect a Project to VMX-Pi: 프로젝트를 VMX-Pi에 연결
             Start Robot Coding: 로봇 코딩 시작하기
             Hardware Support: 하드웨어 지원
             Troubleshooting: 문제 해결
             WPILib Official Documentation: WPILib 공식 문서
-            Studica Official Documentation: Studica 공식 문서
-            C++ API: C++ API 문서
+            VMXONWPI GitHub: VMXONWPI GitHub
+            VMX2026 Extension Releases: VMX2026 확장 프로그램 릴리스
