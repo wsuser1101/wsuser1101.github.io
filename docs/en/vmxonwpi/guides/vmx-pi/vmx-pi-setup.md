@@ -2,29 +2,25 @@
 title: VMX-Pi Setup
 ---
 
-## Robot requirements
+## Download the VMX on WPI image
 
-VMX on WPI is tested with a Raspberry Pi 4 running **64-bit Ubuntu 26.04.1 LTS** and the Studica `vmxpi-hal` package. The VMX HAL's `libvmxpi_hal_cpp.so` and headers come from Studica and are not bundled with WPILib or the Robot Manager package.
+VMX on WPI will be distributed as a bootable VMX-pi image. The goal is a ready-to-deploy robot: flash the image, power on the VMX-pi, connect the development computer to the robot's Wi-Fi hotspot, and deploy a WPILib project over that local connection. Internet access is not required for the robot-to-computer deployment connection. The image is intended to include the tested **64-bit Ubuntu 26.04.1 LTS** base and the robot-side VMX HAL, Robot Manager, and hotspot setup, so you do not need to install these packages by hand.
 
-Prepare a 64-bit Ubuntu 26.04 ARM64 system image for the VMX-pi. If you use a prebuilt image, verify that it includes the VMX-pi HAL before deploying. The image distribution link used by the lab is temporary; ask the project maintainer for the current image and its checksum before flashing it.
+The image release link, version, login details, and checksum will be listed here when the first VMX on WPI image is published. Use the release notes for the exact image contents and credentials; do not substitute a W4Studica 2027 image.
 
 ## Write the image to storage
 
-Use Raspberry Pi Imager to write the compatible image to the robot's SD card or storage device.
+After downloading the image, use Raspberry Pi Imager to write it to the robot's SD card or storage device.
 
 1. Select the Raspberry Pi model that matches the robot.
 2. Open the operating-system list and choose **Use custom**.
-3. Select the Ubuntu 26.04 ARM64 VMX-pi image.
+3. Select the VMX on WPI image file.
 4. Select the robot's storage device and verify its name and capacity.
 5. Confirm the write. **This erases all data on the selected device.**
 6. Wait for both writing and verification to finish before removing the card.
 
 ## First boot
 
-Connect the robot to Ethernet or its Wi-Fi access point and sign in as `ubuntu`. Change any default password before putting the robot on a shared network. Install the VMX Robot Manager package; its repository includes instructions to build the `.deb` from source:
-
-[VMXONWPI/wpi-robot-manager](https://github.com/VMXONWPI/wpi-robot-manager)
-
-The package configures the `robot_manager` service, NetworkManager integration, wired networking, CPU and Wi-Fi performance settings, and the `/home/lvuser` runtime directory. The Studica `vmxpi-hal` package must also be present.
+Power on the robot, join the VMX hotspot from the development computer using the SSID and password listed in the image release notes, then deploy to the robot's hotspot address. The image starts the `robot_manager` service and configures NetworkManager, the Wi-Fi hotspot and wired networking, CPU and Wi-Fi performance settings, and the `/home/lvuser` runtime directory. Its implementation is maintained in the [VMXONWPI/wpi-robot-manager repository](https://github.com/VMXONWPI/wpi-robot-manager).
 
 For connection addresses and network commands, see [VMX-Pi Network](vmx-pi-network.md). For the computer-side WPILib setup, see [Install WPILib and VMX2026](software-install.md).

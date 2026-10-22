@@ -2,7 +2,7 @@
 title: VMX-Pi Network
 ---
 
-The VMX Robot Manager keeps the familiar W4Studica command names while configuring interfaces through NetworkManager. After installing the package, wired Ethernet is configured automatically. Configure the robot's access point once with `setupHotspot`.
+The VMX Robot Manager keeps the familiar W4Studica command names while configuring interfaces through NetworkManager. The VMX on WPI image is intended to start with its Wi-Fi hotspot configured, so the development computer can connect directly and deploy locally. Wired Ethernet is configured automatically. Use `setupHotspot` to change or recreate the access point.
 
 ## Wi-Fi access point
 

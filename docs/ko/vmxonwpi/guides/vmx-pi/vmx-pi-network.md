@@ -2,7 +2,7 @@
 title: VMX-Pi 네트워크
 ---
 
-VMX Robot Manager는 W4Studica와 같은 명령 이름을 유지하면서 NetworkManager로 네트워크를 설정합니다. 패키지 설치 후 유선 이더넷은 자동 구성됩니다. Wi-Fi 핫스팟은 `setupHotspot`으로 한 번 설정하세요.
+VMX Robot Manager는 W4Studica와 같은 명령 이름을 유지하면서 NetworkManager로 네트워크를 설정합니다. VMX on WPI 이미지에는 개발 컴퓨터가 로봇에 직접 연결해 로컬로 배포할 수 있도록 Wi-Fi 핫스팟을 미리 구성할 예정입니다. 유선 이더넷은 자동 구성됩니다. 핫스팟을 변경하거나 다시 만들 때는 `setupHotspot`을 사용하세요.
 
 ## Wi-Fi 액세스 포인트
 

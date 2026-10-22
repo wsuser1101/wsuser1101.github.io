@@ -4,8 +4,6 @@ site_description: WPILib 2026 and VMX-pi setup, development, and deployment guid
 
 theme:
   name: material
-  logo: assets/vmxonwpi.svg
-  favicon: assets/vmxonwpi.svg
   language: en
   palette:
     - media: "(prefers-color-scheme: light)"
