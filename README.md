@@ -31,8 +31,12 @@ site root in both languages.
 The API source commit and displayed version are pinned in `apidocs/source.json`
 for W4Studica and `apidocs/vmxonwpi/source.json` for VMX on WPI.
 The W4Studica reference includes WPILib public headers, Studica driver headers
-and W4Studica VMX integration headers. The VMX on WPI reference uses the 2026
-WPILib public headers, including the `wpilibNewCommands` module and HAL.
+and W4Studica VMX integration headers. The VMX on WPI reference includes only
+the VMX backend interface headers explicitly listed in `VMX_HEADERS` in the
+builder: channel mapping, configuration, Driver Station communication, packet
+handling, time, AHRS and VMX errors. These are internal HAL interfaces, not
+new public robot APIs. General WPILib classes, standard HAL headers, bundled
+third-party code and the proprietary VMX SDK are excluded from that reference.
 The VMX HAL SDK is never an input. Library source files are
 read without modification. Java API docs are not part of this first setup.
 

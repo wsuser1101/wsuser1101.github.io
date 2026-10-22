@@ -26,7 +26,7 @@ The WPILib version is 2026.2.2. The current VMX GradleRIO and HAL pair is 2026.2
 
 ## Project links
 
-- [VMX on WPI C++ API reference](/vmxonwpi/apidocs/) — searchable WPILib 2026 classes, namespaces and public HAL headers. API listings do not establish VMX-pi hardware support; check [hardware support](guides/vmx-pi/hardware-support.md).
+- [VMX on WPI C++ API reference](/vmxonwpi/apidocs/) — only the interfaces added by the VMX HAL port, including channel mapping and Driver Station communication. These are internal backend interfaces; standard WPILib classes are excluded. See [hardware support](guides/vmx-pi/hardware-support.md) for robot I/O capabilities.
 - [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)
 - [VMXONWPI on GitHub](https://github.com/VMXONWPI)
 - [WPILib 2026 documentation](https://docs.wpilib.org/en/2026/)
