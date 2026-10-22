@@ -2,25 +2,48 @@
 title: VMX-Pi 설정
 ---
 
-## VMX on WPI 이미지 다운로드
+## VMX-Pi 이미지 다운로드
 
-VMX on WPI는 VMX-pi용 부팅 이미지로 배포할 예정입니다. 로봇을 바로 배포할 수 있는 상태로 제공하는 것이 목표입니다. 이미지를 기록하고 VMX-pi 전원을 켠 뒤, 개발 컴퓨터를 로봇의 Wi-Fi 핫스팟에 연결해 로컬 네트워크로 WPILib 프로젝트를 배포하면 됩니다. 로봇과 개발 컴퓨터 사이의 배포 연결에는 인터넷이 필요하지 않습니다. 이미지에는 시험에 사용한 **64비트 Ubuntu 26.04.1 LTS** 기반과 로봇용 VMX HAL, Robot Manager, 핫스팟 설정을 포함해 패키지를 직접 설치하지 않도록 할 계획입니다.
+아래 링크에서 VMX-Pi 이미지를 다운로드하세요. 임시 링크이므로 주소가 변경될 수 있습니다.
 
-첫 VMX on WPI 이미지가 공개되면 이곳에 다운로드 링크, 버전, 로그인 정보, 체크섬을 안내하겠습니다. 이미지별 정확한 포함 내용과 계정 정보는 릴리스 안내를 확인하세요. W4Studica 2027 이미지를 대신 사용하지 마세요.
+[VMX-Pi 이미지 다운로드](https://naver.me/GuCcHhMS)
 
 ## 저장 장치에 이미지 기록하기
 
-이미지를 내려받은 뒤 Raspberry Pi Imager로 로봇의 SD 카드 또는 저장 장치에 기록합니다.
+Raspberry Pi Imager를 사용해 다운로드한 이미지를 SD 카드 또는 사용할 저장 장치에 기록합니다. 아래 스크린샷은 Raspberry Pi 4와 14.8 GB 저장 장치로 진행한 예시입니다. 실제 환경에서는 장치 이름, 용량, 이미지 파일명이 다를 수 있습니다.
 
-1. 로봇에 맞는 Raspberry Pi 모델을 선택합니다.
-2. 운영체제 목록에서 **Use custom**을 선택합니다.
-3. VMX on WPI 이미지 파일을 선택합니다.
-4. 로봇의 저장 장치를 선택하고 이름과 용량을 확인합니다.
-5. 기록을 진행합니다. **선택한 장치의 데이터가 모두 삭제됩니다.**
-6. 기록과 검증이 모두 끝난 뒤 카드를 분리합니다.
+1. 사용 중인 하드웨어와 같은 Raspberry Pi 모델을 선택합니다. 아래 예시는 Raspberry Pi 4입니다.
 
-## 첫 부팅
+   ![Raspberry Pi 4가 선택된 Raspberry Pi Imager 장치 선택 화면](/assets/w4studica/vmx-pi-setup/01-select-device.png)
 
-로봇 전원을 켜고 개발 컴퓨터에서 이미지 릴리스 안내의 VMX 핫스팟 이름과 비밀번호로 접속한 뒤, 핫스팟 주소를 대상으로 배포합니다. 이미지는 `robot_manager` 서비스를 시작하고 NetworkManager, Wi-Fi 핫스팟과 유선 네트워크, CPU·Wi-Fi 성능 설정, `/home/lvuser` 런타임 디렉터리를 구성합니다. 구현은 [VMXONWPI/wpi-robot-manager 저장소](https://github.com/VMXONWPI/wpi-robot-manager)에서 관리합니다.
+2. 운영체제 목록을 열고 **Use custom**을 선택합니다.
 
-접속 주소와 네트워크 명령은 [VMX-Pi 네트워크](vmx-pi-network.md)를, 개발 컴퓨터의 WPILib 설정은 [WPILib 및 VMX2026 설치](software-install.md)를 참고하세요.
+   ![Use custom 항목이 강조된 Raspberry Pi Imager 운영체제 목록](/assets/w4studica/vmx-pi-setup/02-select-os.png)
+
+3. 위 링크에서 다운로드한 VMX-Pi 이미지 파일을 선택합니다. `WPILib 2027.iso`는 PC용 WPILib 설치 파일이므로 선택하지 마세요. PC에 WPILib을 설치하려면 [소프트웨어 설치](software-install.md)을 참고하세요.
+
+4. 이미지를 기록할 SD 카드 또는 저장 장치를 선택합니다. 다음 단계로 넘어가기 전에 장치 이름과 용량을 확인하세요.
+
+   ![Raspberry Pi Imager 저장 장치 선택 화면](/assets/w4studica/vmx-pi-setup/04-select-storage.png)
+
+5. 선택한 장치를 확인한 뒤 기록을 진행합니다. **이미지를 기록하면 선택한 장치의 모든 데이터가 삭제되며 되돌릴 수 없습니다.** 진행하기 전에 올바른 장치를 선택했는지 꼭 확인하세요.
+
+   ![Raspberry Pi Imager의 데이터 삭제 및 기록 확인 창](/assets/w4studica/vmx-pi-setup/05-erase-confirmation.png)
+
+6. 이미지 기록이 끝날 때까지 기다립니다. 작업 중에는 저장 장치를 연결된 상태로 두세요.
+
+   ![이미지를 기록 중인 Raspberry Pi Imager 화면](/assets/w4studica/vmx-pi-setup/06-writing.png)
+
+7. 기록이 끝난 뒤 검증도 완료될 때까지 기다립니다. 기록 또는 검증 중에는 장치를 분리하지 마세요.
+
+   ![기록한 이미지를 검증 중인 Raspberry Pi Imager 화면](/assets/w4studica/vmx-pi-setup/07-verifying.png)
+
+8. **Write complete**가 표시되면 저장 장치를 사용할 수 있습니다. 장치가 자동으로 꺼내졌다면 안전하게 분리하면 됩니다.
+
+## 로그인 정보
+
+다음은 VMX-Pi에 고정된 로그인 정보입니다. VMX-Pi 시스템에 로그인할 때마다 이 정보를 사용하세요.
+
+| 사용자 이름 | 비밀번호 |
+|---|---|
+| `ubuntu` | `password` |

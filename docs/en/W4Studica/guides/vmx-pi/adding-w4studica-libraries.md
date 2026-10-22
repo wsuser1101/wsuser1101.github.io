@@ -8,7 +8,7 @@ Click a screenshot to view it at full size.
 
 1. Open the Command Palette with **Ctrl+Shift+P** and run **WPILib: Create a new project**.
 
-    [![WPILib Create a new project command with the pointer over it](../../../../assets/vscode-create-project-command-zoom.png)](../../../../assets/vscode-create-project-command-zoom.png)
+    [![WPILib Create a new project command with the pointer over it](/assets/w4studica/vscode-create-project-command-zoom.png)](/assets/w4studica/vscode-create-project-command-zoom.png)
 
 2. Set **Template** to **C++**.
 
@@ -20,15 +20,15 @@ Click a screenshot to view it at full size.
 
     After the project opens, run a build and confirm that it succeeds. The screenshot shows **BUILD SUCCESSFUL**.
 
-    [![WPILib VS Code terminal showing BUILD SUCCESSFUL](../../../../assets/vscode-build-success.png)](../../../../assets/vscode-build-success.png)
+    [![WPILib VS Code terminal showing BUILD SUCCESSFUL](/assets/w4studica/vscode-build-success.png)](/assets/w4studica/vscode-build-success.png)
 
 6. With the project open, click the **W4Studica** icon in the editor toolbar to open its Command Palette. The screenshot shows the pointer on the W4Studica icon; the tooltip reads “Open W4Studica Command Palette.”
 
-    [![Mouse pointer over the W4Studica toolbar icon, with its Command Palette tooltip visible](../../../../assets/vscode-w4studica-icon-click.png)](../../../../assets/vscode-w4studica-icon-click.png)
+    [![Mouse pointer over the W4Studica toolbar icon, with its Command Palette tooltip visible](/assets/w4studica/vscode-w4studica-icon-click.png)](/assets/w4studica/vscode-w4studica-icon-click.png)
 
 7. Select **W4Studica: Change the deploy target to VMX (from SystemCore)**. The yellow outline and arrow in the screenshot mark this VMX target command.
 
-    [![Command Palette with the VMX deploy-target command outlined in yellow](../../../../assets/vscode-command-palette-zoom.png)](../../../../assets/vscode-command-palette-zoom.png)
+    [![Command Palette with the VMX deploy-target command outlined in yellow](/assets/w4studica/vscode-command-palette-zoom.png)](/assets/w4studica/vscode-command-palette-zoom.png)
 
 ## Optional: Update W4Studica library versions
 

@@ -57,3 +57,8 @@ Write and build C++ robot code on a PC, then deploy it to the VMX-pi with Gradle
     PWM and servo output and battery voltage are in this beta but have not been tested on a robot. IMU roll, pitch and Z-rate directions still need verification. WPILib I2C, DutyCycle and IMU quaternion output are not available, and Java robot programs are not supported. See [Hardware Support](guides/vmx-pi/hardware-support.md).
 
 We are documenting what works and expanding support over time. W4Studica is a community project and is not an official Studica or WPILib distribution.
+
+## Related documentation
+
+- [WPILib 2027 documentation](https://docs.wpilib.org/en/2027/)
+- [Studica documentation](https://learn.studica.com/)

@@ -1,6 +1,6 @@
-# VMX on WPI and W4Studica documentation
+# VMX-Pi documentation
 
-The home page introduces both projects. The **VMX on WPI** guides live under
+The home page links to both projects. The **VMX-Pi on WPILib** guides live under
 `/vmxonwpi/` and cover WPILib 2026, the VMX2026 extension, and the Ubuntu-based
 robot setup. The separate **W4Studica** guides live under `/W4Studica/` and cover
 their WPILib 2027 beta. Their setup steps, extensions, and release streams are
@@ -11,6 +11,22 @@ not duplicated under VMX on WPI because that API is for the separate W4Studica
 2027 codebase. English and Korean pages are in matching `docs/en/` and `docs/ko/`
 folders; the Material language selector switches between page translations.
 
+## Source layout
+
+- `docs/en/` and `docs/ko/`: matching English and Korean pages.
+- `vmxonwpi/` and `W4Studica/` inside each language: project introductions and guides.
+- `docs/assets/w4studica/`: one shared copy of the W4Studica screenshots.
+- `docs/assets/stylesheets/extra.css`: shared layout styles.
+- `mkdocs.yml`: navigation, translations, and theme settings.
+- `apidocs/` and `scripts/build_apidocs.py`: W4Studica API build inputs.
+
+The shared site header identifies the documentation hub. Each project has its own
+overview, setup sequence, and repository links. Keep project names and WPILib
+versions on those project pages. Use relative Markdown links for internal pages
+so the language selector and navigation keep readers in their selected language.
+Shared screenshot URLs start with `/assets/w4studica/` and are served from the
+site root in both languages.
+
 The API source commit and displayed version are pinned in `apidocs/source.json`.
 Inputs are WPILib public headers, Studica driver headers and W4Studica VMX
 integration headers. The VMX HAL SDK is never an input. Library source files are
@@ -18,13 +34,20 @@ read without modification. Java API docs are not part of this first setup.
 
 ## Local build
 
-Install Python dependencies from `requirements.txt`, plus Doxygen (1.9.8 or newer),
-Graphviz and Git. Check out the pinned allwpilib commit alongside this repository,
-then build in this order:
+Create a local environment and build the English and Korean guides:
 
 ```sh
-python -m mkdocs build --strict
-python scripts/build_apidocs.py --allwpilib ../allwpilib
+python -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m mkdocs build --strict
+```
+
+For the complete site, also install Doxygen (1.9.8 or newer), Graphviz and Git,
+and check out the allwpilib commit pinned in `apidocs/source.json` alongside
+this repository. Build the API after the guides:
+
+```sh
+.venv/bin/python scripts/build_apidocs.py --allwpilib ../allwpilib
 python -m http.server 8000 --directory site --bind 127.0.0.1
 ```
 

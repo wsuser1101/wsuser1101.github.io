@@ -8,7 +8,7 @@ title: W4Studica 라이브러리 추가
 
 1. **Ctrl+Shift+P**로 명령 팔레트를 열고 **WPILib: Create a new project**를 실행합니다.
 
-    [![마우스 포인터가 가리키는 WPILib Create a new project 명령](../../assets/vscode-create-project-command-zoom.png)](../../assets/vscode-create-project-command-zoom.png)
+    [![마우스 포인터가 가리키는 WPILib Create a new project 명령](/assets/w4studica/vscode-create-project-command-zoom.png)](/assets/w4studica/vscode-create-project-command-zoom.png)
 
 2. **Template**에서 `C++`를 선택합니다.
 
@@ -20,15 +20,15 @@ title: W4Studica 라이브러리 추가
 
     프로젝트가 열리면 빌드를 실행해 성공하는지 확인합니다. 아래 캡처에 **BUILD SUCCESSFUL** 결과가 보입니다.
 
-    [![WPILib VS Code 터미널의 BUILD SUCCESSFUL 결과](../../assets/vscode-build-success.png)](../../assets/vscode-build-success.png)
+    [![WPILib VS Code 터미널의 BUILD SUCCESSFUL 결과](/assets/w4studica/vscode-build-success.png)](/assets/w4studica/vscode-build-success.png)
 
 6. 프로젝트를 연 상태에서 편집기 도구 모음의 **W4Studica** 아이콘을 클릭해 W4Studica 명령 팔레트를 엽니다. 아래 캡처에서 포인터가 W4Studica 아이콘 위에 있고, 툴팁에 “Open W4Studica Command Palette”라고 표시됩니다.
 
-    [![명령 팔레트 툴팁과 함께 포인터가 올라간 W4Studica 도구 모음 아이콘](../../assets/vscode-w4studica-icon-click.png)](../../assets/vscode-w4studica-icon-click.png)
+    [![명령 팔레트 툴팁과 함께 포인터가 올라간 W4Studica 도구 모음 아이콘](/assets/w4studica/vscode-w4studica-icon-click.png)](/assets/w4studica/vscode-w4studica-icon-click.png)
 
 7. `W4Studica: Change the deploy target to VMX (from SystemCore)`를 선택합니다. 아래 캡처에서 노란 테두리와 화살표가 VMX 대상 명령을 가리킵니다.
 
-    [![노란색으로 VMX 배포 대상 명령을 강조한 명령 팔레트](../../assets/vscode-command-palette-zoom.png)](../../assets/vscode-command-palette-zoom.png)
+    [![노란색으로 VMX 배포 대상 명령을 강조한 명령 팔레트](/assets/w4studica/vscode-command-palette-zoom.png)](/assets/w4studica/vscode-command-palette-zoom.png)
 
 ## 선택 사항: W4Studica 라이브러리 버전 업데이트
 

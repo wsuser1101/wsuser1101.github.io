@@ -2,30 +2,37 @@
 title: Home
 hide:
   - toc
+  - navigation
 ---
 
 <div class="hero" markdown>
 
-# VMX on WPI
+# VMX-Pi Documentation
 
-**Use WPILib 2026 on the Studica VMX-pi.** This project provides a VMX-pi HAL, a GradleRIO deploy target, a VS Code extension, and a robot manager for 64-bit Ubuntu.
-
-[Get started](vmxonwpi/guides/vmx-pi/vmx-pi-setup.md){ .md-button .md-button--primary }
-[VMX2026 extension](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases){ .md-button }
-[VMXONWPI on GitHub](https://github.com/VMXONWPI){ .md-button }
+Setup, programming, and deployment guides. Choose the project and WPILib version you use.
 
 </div>
 
-## Choose a project
+<div class="grid cards" markdown>
 
-### VMX on WPI — WPILib 2026
+-   :material-robot: **VMX-Pi on WPILib**
 
-Use the VMX2026 extension to connect a standard WPILib project to the VMX-pi target. C++ and Java robot projects are supported. The robot runs 64-bit Ubuntu and uses NetworkManager-based networking and the `robot_manager` service.
+    ---
 
-[Setup and deploy a WPILib 2026 project →](vmxonwpi/guides/vmx-pi/software-install.md)
+    **WPILib 2026 · C++ and Java**
 
-### W4Studica — WPILib 2027
+    Set up the VMX-Pi image, install the VMX2026 extension, and deploy a robot project.
 
-The W4Studica section documents a separate 2027 beta project and its own extension, HAL, and workflow. Instructions there do not apply to VMX on WPI 2026.
+    [Open documentation →](vmxonwpi/index.md)
 
-[Open W4Studica documentation →](W4Studica/index.md)
+-   :material-chip: **W4Studica**
+
+    ---
+
+    **WPILib 2027 beta · C++**
+
+    Set up W4Studica, connect hardware through its libraries, and browse the C++ API.
+
+    [Open documentation →](W4Studica/index.md)
+
+</div>

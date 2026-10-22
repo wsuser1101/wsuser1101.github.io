@@ -60,3 +60,8 @@ VMX-pi에서는 WPILib과 하드웨어 드라이버를 이어주는 W4Studica �
     PWM·서보 출력과 배터리 전압은 이번 베타에 들어 있지만 아직 로봇에서 시험하지 않았습니다. IMU roll, pitch, Z축 각속도의 방향은 더 확인해야 합니다. WPILib의 I2C, DutyCycle, IMU 쿼터니언 출력은 아직 없고, Java 로봇 프로그램은 지원하지 않습니다. 자세한 내용은 [하드웨어 지원](guides/vmx-pi/hardware-support.md)을 참고하세요.
 
 지원 범위를 넓히면서 기능별 확인 결과와 사용 방법을 문서에 정리하고 있습니다. W4Studica는 Studica 또는 WPILib의 공식 배포판이 아닌 커뮤니티 프로젝트입니다.
+
+## 관련 문서
+
+- [WPILib 2027 공식 문서](https://docs.wpilib.org/en/2027/)
+- [Studica 공식 문서](https://learn.studica.com/)

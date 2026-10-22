@@ -6,7 +6,7 @@ title: Software Install
 
 [Open the WPILib 2027.0.0-alpha-7 release](https://github.com/wpilibsuite/allwpilib/releases/tag/v2027.0.0-alpha-7). In its **Downloads** section, click the link that matches your computer, as shown below. Choose x64 or Arm64 for your processor; on macOS, choose **Mac (Arm)** for Apple silicon or **Mac (Intel)** for an Intel Mac.
 
-[![WPILib release Downloads section](../../assets/wpilib-downloads.png)](https://github.com/wpilibsuite/allwpilib/releases/tag/v2027.0.0-alpha-7)
+[![WPILib release Downloads section](/assets/w4studica/wpilib-downloads.png)](https://github.com/wpilibsuite/allwpilib/releases/tag/v2027.0.0-alpha-7)
 
 These installation instructions reference the [official WPILib installation guide](https://docs.wpilib.org/en/latest/docs/zero-to-robot/step-2/wpilib-setup.html). This is a pre-release, so check that guide for current requirements and release notes before installing.
 
