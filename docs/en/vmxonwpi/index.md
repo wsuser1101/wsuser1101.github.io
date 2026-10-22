@@ -8,6 +8,8 @@ hide:
 
 **WPILib 2026 · C++ and Java**
 
+[C++ API](/vmxonwpi/apidocs/){ .md-button }
+
 VMX-Pi on WPILib brings the Studica VMX-pi into the WPILib 2026 development workflow. The project includes a VMX-pi HAL for 64-bit Linux, a GradleRIO `VmxPi` deploy target, the VMX2026 VS Code extension, and a NetworkManager-based robot manager.
 
 Use these guides for the WPILib 2026 releases from [VMXONWPI](https://github.com/VMXONWPI).
@@ -24,6 +26,7 @@ The WPILib version is 2026.2.2. The current VMX GradleRIO and HAL pair is 2026.2
 
 ## Project links
 
+- [VMX on WPI C++ API reference](/vmxonwpi/apidocs/) — searchable WPILib 2026 classes, namespaces and public HAL headers. API listings do not establish VMX-pi hardware support; check [hardware support](guides/vmx-pi/hardware-support.md).
 - [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)
 - [VMXONWPI on GitHub](https://github.com/VMXONWPI)
 - [WPILib 2026 documentation](https://docs.wpilib.org/en/2026/)

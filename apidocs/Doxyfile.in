@@ -1,6 +1,6 @@
-PROJECT_NAME           = "W4Studica C++ API"
+PROJECT_NAME           = @PROJECT_NAME@
 PROJECT_NUMBER         = @VERSION@
-PROJECT_BRIEF          = "WPILib · Studica Drivers · VMX"
+PROJECT_BRIEF          = @PROJECT_BRIEF@
 OUTPUT_DIRECTORY       = @BUILD_DIRECTORY@
 OUTPUT_LANGUAGE        = English
 INPUT                  = @INPUT@

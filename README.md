@@ -6,9 +6,9 @@ robot setup. The separate **W4Studica** guides live under `/W4Studica/` and cove
 their WPILib 2027 beta. Their setup steps, extensions, and release streams are
 different; do not treat either guide as a copy of the other.
 
-Doxygen builds the W4Studica C++ API reference at `/W4Studica/apidocs/`. It is
-not duplicated under VMX on WPI because that API is for the separate W4Studica
-2027 codebase. English and Korean pages are in matching `docs/en/` and `docs/ko/`
+Doxygen builds separate C++ API references at `/W4Studica/apidocs/` and
+`/vmxonwpi/apidocs/`. Each uses its own pinned source: W4Studica 2027 and
+VMX on WPI 2026, respectively. English and Korean pages are in matching `docs/en/` and `docs/ko/`
 folders; the Material language selector switches between page translations.
 
 ## Source layout
@@ -18,7 +18,8 @@ folders; the Material language selector switches between page translations.
 - `docs/assets/w4studica/`: one shared copy of the W4Studica screenshots.
 - `docs/assets/stylesheets/extra.css`: shared layout styles.
 - `mkdocs.yml`: navigation, translations, and theme settings.
-- `apidocs/` and `scripts/build_apidocs.py`: W4Studica API build inputs.
+- `apidocs/` and `scripts/build_apidocs.py`: shared API builder, theme and W4Studica inputs.
+- `apidocs/vmxonwpi/`: VMX on WPI API source pin and main page.
 
 The shared site header identifies the documentation hub. Each project has its own
 overview, setup sequence, and repository links. Keep project names and WPILib
@@ -27,9 +28,12 @@ so the language selector and navigation keep readers in their selected language.
 Shared screenshot URLs start with `/assets/w4studica/` and are served from the
 site root in both languages.
 
-The API source commit and displayed version are pinned in `apidocs/source.json`.
-Inputs are WPILib public headers, Studica driver headers and W4Studica VMX
-integration headers. The VMX HAL SDK is never an input. Library source files are
+The API source commit and displayed version are pinned in `apidocs/source.json`
+for W4Studica and `apidocs/vmxonwpi/source.json` for VMX on WPI.
+The W4Studica reference includes WPILib public headers, Studica driver headers
+and W4Studica VMX integration headers. The VMX on WPI reference uses the 2026
+WPILib public headers, including the `wpilibNewCommands` module and HAL.
+The VMX HAL SDK is never an input. Library source files are
 read without modification. Java API docs are not part of this first setup.
 
 ## Local build
@@ -43,18 +47,23 @@ python -m venv .venv
 ```
 
 For the complete site, also install Doxygen (1.9.8 or newer), Graphviz and Git,
-and check out the allwpilib commit pinned in `apidocs/source.json` alongside
-this repository. Build the API after the guides:
+and check out each pinned allwpilib commit into a separate directory.
+For example, use `.sources/allwpilib` for W4Studica and
+`.sources/vmxonwpi-allwpilib` for VMX on WPI, matching GitHub Actions.
+Build both references after the guides:
 
 ```sh
-.venv/bin/python scripts/build_apidocs.py --allwpilib ../allwpilib
+.venv/bin/python scripts/build_apidocs.py --allwpilib .sources/allwpilib
+.venv/bin/python scripts/build_apidocs.py --project vmxonwpi --allwpilib .sources/vmxonwpi-allwpilib
 python -m http.server 8000 --directory site --bind 127.0.0.1
 ```
 
 Open `http://127.0.0.1:8000/` for the portal or
-`http://127.0.0.1:8000/W4Studica/apidocs/` for the W4Studica API. Rebuilding MkDocs clears `site/`, so always
+`http://127.0.0.1:8000/W4Studica/apidocs/` for the W4Studica API, or
+`http://127.0.0.1:8000/vmxonwpi/apidocs/` for the VMX on WPI API. Rebuilding MkDocs clears `site/`, so always
 run the API builder afterward. Generated HTML is ignored by Git. Parser warnings
-are saved to `.site/apidocs-warnings.log`, outside the public site. The builder
+are saved to `.site/apidocs-warnings.log` (W4Studica) and
+`.site/vmxonwpi-apidocs-warnings.log` (VMX on WPI), outside the public site. The builder
 checks required pages, theme checksums and accidental local paths before replacing
 the generated API directory. `build-info.json` records the source, theme and tool.
 

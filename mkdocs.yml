@@ -37,6 +37,7 @@ nav:
       - Start Robot Coding: vmxonwpi/guides/vmx-pi/start-robot-coding.md
       - Hardware Support: vmxonwpi/guides/vmx-pi/hardware-support.md
       - Troubleshooting: vmxonwpi/guides/vmx-pi/troubleshooting.md
+      - C++ API: /vmxonwpi/apidocs/
   - W4Studica:
       - Introduction: W4Studica/index.md
       - VMX-Pi Setup: W4Studica/guides/vmx-pi/vmx-pi-setup.md

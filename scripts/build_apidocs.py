@@ -11,9 +11,12 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 API = ROOT / "apidocs"
-MODULES = ("apriltag", "cameraserver", "cscore", "datalog", "drivers", "fields",
+W4_MODULES = ("apriltag", "cameraserver", "cscore", "datalog", "drivers", "fields",
            "hal", "ntcore", "commandsv2", "telemetry", "tunables", "wpilibc",
            "wpimath", "wpinet", "wpiutil", "romiVendordep", "xrpVendordep")
+VMX_MODULES = ("apriltag", "cameraserver", "cscore", "hal", "ntcore",
+               "wpilibNewCommands", "wpilibc", "wpimath", "wpinet", "wpiutil",
+               "romiVendordep", "xrpVendordep")
 
 
 def quoted(value):
@@ -22,15 +25,19 @@ def quoted(value):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--project", choices=("w4studica", "vmxonwpi"), default="w4studica")
     parser.add_argument("--allwpilib", type=Path, default=ROOT.parent / "allwpilib")
-    parser.add_argument("--output", type=Path, default=ROOT / "site/W4Studica/apidocs")
+    parser.add_argument("--output", type=Path)
     parser.add_argument("--doxygen", default="doxygen")
     args = parser.parse_args()
+    is_vmx = args.project == "vmxonwpi"
+    project_api = API / "vmxonwpi" if is_vmx else API
+    project_path = "vmxonwpi" if is_vmx else "W4Studica"
     source = args.allwpilib.resolve()
-    output = args.output.resolve()
-    config = json.loads((API / "source.json").read_text())
+    output = (args.output or ROOT / "site" / project_path / "apidocs").resolve()
+    config = json.loads((project_api / "source.json").read_text())
     if subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip() != config["ref"]:
-        parser.error("allwpilib HEAD must match the pinned ref in apidocs/source.json")
+        parser.error("allwpilib HEAD must match the pinned ref in " + str(project_api / "source.json"))
     if output == ROOT or output == source or ROOT.is_relative_to(output) or source.is_relative_to(output):
         parser.error("output must not replace a source checkout or its parent")
     theme = API / "theme"
@@ -39,7 +46,7 @@ def main():
         if hashlib.sha256((theme / name).read_bytes()).hexdigest() != expected:
             parser.error("Vendored theme checksum mismatch: " + name)
     inputs = []
-    for module in MODULES:
+    for module in (VMX_MODULES if is_vmx else W4_MODULES):
         public = source / module / "src/main/native/include"
         if not public.is_dir():
             parser.error("Missing public header directory: " + str(public))
@@ -47,9 +54,10 @@ def main():
         generated = source / module / "src/generated/main/native/include"
         if generated.is_dir():
             inputs.append(generated)
-    inputs += [source / "studica_drivers",
-               source / "simulation/halsim_vmx/src/main/native/include",
-               source / "simulation/halsim_vmx/src/studica/native/include"]
+    if not is_vmx:
+        inputs += [source / "studica_drivers",
+                   source / "simulation/halsim_vmx/src/main/native/include",
+                   source / "simulation/halsim_vmx/src/studica/native/include"]
     if any(not path.is_dir() for path in inputs):
         parser.error("Incomplete VMX/Studica public sources")
     # Enumerate public headers: never recurse into Studica's examples or SDK files.
@@ -67,10 +75,12 @@ def main():
         scripts += '\n<script>DoxygenAwesomeDarkModeToggle.init(); DoxygenAwesomeParagraphLink.init();</script>\n'
         header.write_text(header.read_text().replace("</head>", scripts + "</head>"))
         replacements = {
+            "PROJECT_NAME": quoted("VMX on WPI C++ API" if is_vmx else "W4Studica C++ API"),
+            "PROJECT_BRIEF": quoted("WPILib 2026 · VMX-pi HAL" if is_vmx else "WPILib · Studica Drivers · VMX"),
             "VERSION": quoted(config["version"]), "BUILD_DIRECTORY": quoted(build),
-            "INPUT": " ".join(quoted(p) for p in headers + [API / "mainpage.md"]),
+            "INPUT": " ".join(quoted(p) for p in headers + [project_api / "mainpage.md"]),
             "STRIP_PATHS": " ".join(quoted(p) for p in inputs + [source, API]),
-            "MAINPAGE": quoted(API / "mainpage.md"), "HEADER": quoted(header),
+            "MAINPAGE": quoted(project_api / "mainpage.md"), "HEADER": quoted(header),
             "STYLESHEETS": " ".join(quoted(p) for p in [theme / "doxygen-awesome.css", API / "custom.css"]),
             "EXTRA_FILES": " ".join(quoted(p) for p in extra),
             "WARNINGS": quoted(build / "warnings.log"),
@@ -91,7 +101,8 @@ def main():
         warnings = (build / "warnings.log").read_text() if (build / "warnings.log").exists() else ""
         # Keep warnings for maintainers outside the published site.
         (ROOT / ".site").mkdir(exist_ok=True)
-        (ROOT / ".site/apidocs-warnings.log").write_text(warnings)
+        warning_log = ROOT / ".site" / ("vmxonwpi-apidocs-warnings.log" if is_vmx else "apidocs-warnings.log")
+        warning_log.write_text(warnings)
         shutil.copy2(theme / "LICENSE", html / "Doxygen-Awesome-LICENSE.txt")
         (html / "build-info.json").write_text(json.dumps({**config, "theme": provenance,
             "doxygen": subprocess.check_output([args.doxygen, "--version"], text=True).strip(),
@@ -101,7 +112,7 @@ def main():
         html.rename(output)
     print("API docs: " + str(output))
     print("Public headers: " + str(len(headers)))
-    print("Parser warning lines: " + str(len(warnings.splitlines())) + " (see .site/apidocs-warnings.log)")
+    print("Parser warning lines: " + str(len(warnings.splitlines())) + " (see " + str(warning_log.relative_to(ROOT)) + ")")
 
 
 if __name__ == "__main__":

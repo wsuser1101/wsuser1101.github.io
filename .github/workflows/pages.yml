@@ -23,13 +23,16 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v6
-      - name: Read pinned API source
+      - name: Read pinned API sources
         id: api-source
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           source = json.load(open('apidocs/source.json'))
           print('ref=' + source['ref'])
+          vmx_source = json.load(open('apidocs/vmxonwpi/source.json'))
+          print('vmx_repository=' + vmx_source['repository'])
+          print('vmx_ref=' + vmx_source['ref'])
           PY
       - name: Check out pinned API source
         uses: actions/checkout@v6
@@ -37,6 +40,13 @@ jobs:
           repository: W4Studica/allwpilib
           ref: ${{ steps.api-source.outputs.ref }}
           path: .sources/allwpilib
+          persist-credentials: false
+      - name: Check out pinned VMX on WPI API source
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ steps.api-source.outputs.vmx_repository }}
+          ref: ${{ steps.api-source.outputs.vmx_ref }}
+          path: .sources/vmxonwpi-allwpilib
           persist-credentials: false
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -51,8 +61,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends doxygen graphviz
-      - name: Build standalone API documentation
+      - name: Build W4Studica API documentation
         run: python scripts/build_apidocs.py --allwpilib .sources/allwpilib
+      - name: Build VMX on WPI API documentation
+        run: python scripts/build_apidocs.py --project vmxonwpi --allwpilib .sources/vmxonwpi-allwpilib
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload site artifact
