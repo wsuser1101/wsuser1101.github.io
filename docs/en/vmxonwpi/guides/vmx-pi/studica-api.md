@@ -6,8 +6,8 @@ The Studica compatibility implementation retains the C++ `studica` namespace,
 Java `com.studica.frc` package, class names and methods. Standard WPILib APIs
 continue to use `frc` / `frc2` or `edu.wpi.first.wpilibj`.
 
-!!! info "Available in allwpilib 2026.2.2-vmx.3"
-    Install VMX2026 extension **2.0.4 or later**, then run **Update VMX2026 Version**.
+!!! info "Available in allwpilib 2026.2.2-vmx.4"
+    Install VMX2026 extension **2.0.5 or later**, then run **Update VMX2026 Version**.
     It selects matching wpilibc, wpilibj, HAL and HAL JNI for the VMX target.
     GradleRIO remains **2026.2.2-vmx.2**. Remove the old Titan vendor dependency.
     The custom native libraries target linuxarm64; desktop C++ simulation using
@@ -30,7 +30,7 @@ continue to use `frc` / `frc2` or `edu.wpi.first.wpilibj`.
 ## Prepare the project
 
 1. Install [WPILib 2026 and VMX2026](software-install.md) and [select the VMX-pi deploy target](vmx2026-setup.md).
-2. Install VMX2026 **2.0.4 or later** and run **Update VMX2026 Version** to select allwpilib **2026.2.2-vmx.3**. Robot native code targets `linuxarm64`.
+2. Install VMX2026 **2.0.5 or later** and run **Update VMX2026 Version** to select allwpilib **2026.2.2-vmx.4**. Robot native code targets `linuxarm64`.
 3. Remove the old Titan 1.1.8 vendor dependency and rebuild. Do not add the old JAR or native library alongside the new classes.
 
 The classes are part of this fork's wpilibc and wpilibj. They do not load the

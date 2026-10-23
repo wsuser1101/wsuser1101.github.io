@@ -20,7 +20,7 @@ See the [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blo
 ## Studica device classes
 
 TitanQuad, TitanQuadEncoder, Cobra, Servo, ServoContinuous and the original
-Studica 360-degree Lidar are included in allwpilib 2026.2.2-vmx.3 wpilibc /
-wpilibj libraries. Install VMX2026 2.0.4 and run Update VMX2026 Version.
+Studica 360-degree Lidar are included in allwpilib 2026.2.2-vmx.4 wpilibc /
+wpilibj libraries. Install VMX2026 2.0.5 and run Update VMX2026 Version.
 See [Studica APIs](studica-api.md) for supported models, matching libraries,
 C++ / Java examples and hardware verification limits.

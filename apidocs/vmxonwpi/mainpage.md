@@ -2,8 +2,8 @@
 
 **WPILib APIs with VMX implementations · Studica 1.1.8 compatibility**
 
-The Studica classes below are included in **allwpilib 2026.2.2-vmx.3**.
-Install **VMX2026 extension 2.0.4 or later** and run **Update VMX2026 Version**
+The Studica classes below are included in **allwpilib 2026.2.2-vmx.4**.
+Install **VMX2026 extension 2.0.5 or later** and run **Update VMX2026 Version**
 to select matching wpilibc, wpilibj, HAL and HAL JNI with GradleRIO 2026.2.2-vmx.2.
 Remove the old Titan vendor dependency. Native Studica artifacts target
 linuxarm64; desktop C++ simulation with these classes needs a separate build.

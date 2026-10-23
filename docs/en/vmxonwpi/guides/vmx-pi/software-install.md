@@ -12,7 +12,7 @@ Use the WPILib VS Code installation created by that installer when creating and 
 
 ## Install the VMX2026 extension
 
-Download the latest `.vsix` from the VMX2026 extension releases page. The current release is **2.0.4**.
+Download the latest `.vsix` from the VMX2026 extension releases page. The current release is **2.0.5**.
 
 [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)
 
@@ -30,7 +30,7 @@ See [VMX-Pi Setup](vmx-pi-setup.md) for the robot prerequisites and the [Robot M
 
 ## Studica compatibility APIs
 
-VMX2026 **2.0.4** installs the Studica 1.1.8-compatible classes from allwpilib
-**2026.2.2-vmx.3**. Run **Update VMX2026 Version** to connect matching wpilibc,
+VMX2026 **2.0.5** installs the Studica 1.1.8-compatible classes from allwpilib
+**2026.2.2-vmx.4**. Run **Update VMX2026 Version** to connect matching wpilibc,
 wpilibj, HAL and HAL JNI. Remove the old Titan vendor dependency; see
 [Studica API setup](studica-api.md) for examples and platform limits.
