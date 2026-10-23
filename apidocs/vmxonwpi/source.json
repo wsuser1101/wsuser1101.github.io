@@ -1,5 +1,7 @@
 {
   "repository": "VMXONWPI/allwpilib",
-  "ref": "7a10d27fe5bb3291e9a8fc62db0e3d400982d530",
-  "version": "2026.2.2-vmx.2"
+  "ref": "45be4e5c8ef3e6a97a8df2377e2b42c967de7201",
+  "version": "2026.2.2-vmx.2 + Studica 1.1.8 (development)",
+  "baseRelease": "2026.2.2-vmx.2",
+  "status": "development"
 }

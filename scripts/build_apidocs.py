@@ -22,6 +22,8 @@ VMX_HEADERS = ("MauMap.h", "MauInternal.h", "MauTime.h", "MauClockInternal.h",
                "DriveStation/include/DriverComms.hpp",
                "DriveStation/include/PacketReader.h",
                "DriveStation/include/TcpPacketBuffer.h", "navX/include/AHRS_Mau.h")
+VMX_STUDICA_HEADERS = ("TitanQuad.h", "TitanQuadEncoder.h", "Cobra.h", "Servo.h",
+                       "ServoContinuous.h", "Lidar.h")
 VMX_WPILIB_HEADERS = (
     "DigitalInput.h", "DigitalOutput.h", "DigitalSource.h", "DigitalGlitchFilter.h",
     "AnalogInput.h", "AnalogGyro.h", "AnalogTrigger.h", "AnalogTriggerOutput.h",
@@ -83,6 +85,9 @@ def main():
         wpilib_public = source / "wpilibc/src/main/native/include"
         headers = [backend / name for name in VMX_HEADERS]
         headers += [wpilib_public / "frc" / name for name in VMX_WPILIB_HEADERS]
+        headers += [wpilib_public / "studica" / name for name in VMX_STUDICA_HEADERS]
+        headers += [wpilib_public / "frc/SpeedController.h",
+                    wpilib_public / "frc/smartdashboard/SendableBuilder.h"]
         # Match standard HAL declarations to implementations added by this port.
         # Compatibility stubs are included too; the main page lists their limits.
         headers += [hal_public / "hal" / (cpp.stem + ".h")

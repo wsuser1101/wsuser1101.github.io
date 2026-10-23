@@ -27,3 +27,10 @@ sudo apt install openjdk-17-jre-headless
 ```
 
 See [VMX-Pi Setup](vmx-pi-setup.md) for the robot prerequisites and the [Robot Manager repository](https://github.com/VMXONWPI/wpi-robot-manager) for package installation.
+
+## Studica compatibility APIs
+
+The new Studica 1.1.8 compatibility classes are currently available in the
+allwpilib development source. The existing VMX2026 release does not include
+these classes. Use matching custom wpilibc, wpilibj, HAL and HAL JNI builds;
+see [Studica API setup](studica-api.md) before using the device classes.

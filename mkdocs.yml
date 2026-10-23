@@ -35,6 +35,7 @@ nav:
       - VS Code Setup: vmxonwpi/guides/vmx-pi/vscode-setup.md
       - Connect a Project to VMX-Pi: vmxonwpi/guides/vmx-pi/vmx2026-setup.md
       - Start Robot Coding: vmxonwpi/guides/vmx-pi/start-robot-coding.md
+      - Studica APIs: vmxonwpi/guides/vmx-pi/studica-api.md
       - Hardware Support: vmxonwpi/guides/vmx-pi/hardware-support.md
       - Troubleshooting: vmxonwpi/guides/vmx-pi/troubleshooting.md
       - C++ API: /vmxonwpi/apidocs/
@@ -107,5 +108,6 @@ plugins:
             VS Code Setup: VS Code 설정
             Connect a Project to VMX-Pi: 프로젝트를 VMX-Pi에 연결
             Start Robot Coding: 로봇 코딩 시작하기
+            Studica APIs: Studica API 사용법
             Hardware Support: 하드웨어 지원
             Troubleshooting: 문제 해결

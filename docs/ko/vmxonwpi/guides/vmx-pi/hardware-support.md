@@ -16,3 +16,11 @@ VMX on WPI는 VMX-pi용 WPILib 2026 HAL 백엔드를 사용합니다. 지원되�
 HAL에는 호스트 회귀 테스트가 있지만 실제 VMX-pi, 센서, 모터 컨트롤러, Driver Station 시험을 대신하지 않습니다. 로봇에서 사용하기 전에 각 입출력과 안전 동작을 실제 하드웨어에서 확인하세요.
 
 자세한 내용은 [VMX HAL 구현 안내](https://github.com/VMXONWPI/allwpilib/blob/main/vmx/README.md)와 [GradleRIO VMX-pi 배포 안내](https://github.com/VMXONWPI/GradleRIO/blob/main/VMX.md)를 참고하세요.
+
+## Studica 장치 클래스
+
+개발 소스의 wpilibc / wpilibj에는 TitanQuad, TitanQuadEncoder, Cobra, Servo,
+ServoContinuous, 원래 Studica 360도 Lidar 구현이 추가되어 있습니다.
+현재 확장 프로그램 릴리스에는 아직 포함되지 않았습니다.
+지원 모델, 일치하는 라이브러리, C++·Java 예제와 하드웨어 검증 범위는
+[Studica API 사용법](studica-api.md)을 참고하세요.

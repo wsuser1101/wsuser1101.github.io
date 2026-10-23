@@ -19,7 +19,7 @@ Java 프로젝트는 로봇에 Java 17이 필요합니다. C++ 프로젝트는 �
 
 ## WPILib API 사용
 
-2026 프로젝트 템플릿의 표준 WPILib 클래스(`TimedRobot`, `DigitalInput`, `Encoder`, `AnalogInput`, `PWM`, `OnboardIMU` 등)를 사용하고 [하드웨어 지원 안내](hardware-support.md)를 확인하세요. VMX-pi HAL이 VMX 연결을 관리하므로 프로젝트에 다른 HAL을 설치하거나 복사하지 마세요.
+2026 프로젝트 템플릿의 표준 WPILib 클래스(`TimedRobot`, `DigitalInput`, `Encoder`, `AnalogInput`, `PWM`, `BuiltInAccelerometer` 등)를 사용하고 [하드웨어 지원 안내](hardware-support.md)를 확인하세요. VMX-pi HAL이 VMX 연결을 관리하므로 프로젝트에 다른 HAL을 설치하거나 복사하지 마세요.
 
 WPILib API에서 제공하지 않는 기능이 필요하면 C++에서 Studica VMX SDK를 직접 사용할 수 있습니다. SDK는 로봇의 `vmxpi-hal` 패키지가 제공합니다. SDK 가져오기 작업과 CMake/Gradle 설정은 [GradleRIO VMX-pi 안내](https://github.com/VMXONWPI/GradleRIO/blob/main/VMX.md)를 참고하세요.
 
@@ -32,3 +32,9 @@ sudo journalctl -u robot_manager -f
 ```
 
 프로젝트 연결과 배포 세부 사항은 [프로젝트를 VMX-Pi에 연결](vmx2026-setup.md)을 참고하세요.
+
+## Studica 장치 API
+
+Titan 모터·엔코더, Cobra, Studica 서보와 원래 360도 Lidar는
+[Studica API 사용법](studica-api.md)을 참고하세요. C++·Java 예제와 함께
+일치하는 개발 라이브러리를 준비하는 방법을 안내합니다.

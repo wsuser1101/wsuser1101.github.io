@@ -1,6 +1,11 @@
 # VMX on WPI C++ API
 
-**WPILib APIs with VMX implementations · 2026.2.2-vmx.2**
+**WPILib APIs with VMX implementations · Studica 1.1.8 compatibility**
+
+The Studica classes below are development-source additions on top of the
+2026.2.2-vmx.2 base release. They are not yet included in that published release
+or the current extension package. See the [Studica API setup guide](/vmxonwpi/guides/vmx-pi/studica-api/)
+for matching library requirements and C++ / Java examples.
 
 This reference covers both **standard WPILib hardware APIs implemented by the
 VMX-pi port** and **VMX-specific interfaces added by the port**. An API does not
@@ -8,6 +13,33 @@ need a new name or declaration to be included: standard WPILib classes and HAL
 functions with a VMX implementation belong here too.
 
 Use **Classes**, **Namespaces**, **Files**, or search to find an interface.
+
+## Studica device APIs
+
+The original C++ `studica` namespace and `#include <studica/...>` paths are
+retained. Java uses `com.studica.frc`; see the [Java usage guide](/vmxonwpi/guides/vmx-pi/studica-api/#java).
+
+| Device | C++ reference | Notes |
+| --- | --- | --- |
+| Titan Quad motor | @ref studica::TitanQuad | CAN ID 1..63; motor channel 0..3; shares the existing HAL transport |
+| Titan Quad encoder | @ref studica::TitanQuadEncoder | Signed counts, distance scaling, direction and shaft RPM |
+| Cobra ADC | @ref studica::Cobra | Four ADS1015 channels on MXP I2C, address 0x48 |
+| Positional servo | @ref studica::Servo | 0..300 degrees, 500..2500 microsecond PWM |
+| Continuous servo | @ref studica::ServoContinuous | PWM motor interface with 1500 microsecond neutral |
+| Original Studica 360-degree LiDAR | @ref studica::Lidar | Non-intensity triangle protocol; 360 rays; distance in mm |
+
+Titan Set calls require an attached, enabled Driver Station without E-stop.
+Refresh commands within 100 ms; disabled or expired commands are cleared.
+C++ and Java use the same CAN protocol. Java's old TitanDriver JNI library is
+not required. The legacy public Java method signatures have been checked against
+the original 1.1.8 JAR. Hardware tests remain required; host tests do not validate
+physical motor, sensor or USB adapter behavior.
+
+C++ TitanQuadEncoder retains its double-valued period methods instead of the
+2026 CounterBase's units-valued methods. Java still implements CounterBase.
+The old SendableBuilder package/header and Titan SpeedController interface
+have source adapters. These are source-compatible APIs; recompile instead of
+loading the old 2020 binaries alongside the new classes.
 
 ## WPILib APIs with VMX implementations
 
@@ -73,5 +105,5 @@ acquire their own API pages here.
 - [VMX on WPI guides](/vmxonwpi/)
 - [한국어 안내](/ko/vmxonwpi/)
 - [Hardware support](/vmxonwpi/guides/vmx-pi/hardware-support/)
-- [VMX backend source](https://github.com/VMXONWPI/allwpilib/tree/7a10d27fe5bb3291e9a8fc62db0e3d400982d530/hal/src/main/native/mau)
-- [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blob/7a10d27fe5bb3291e9a8fc62db0e3d400982d530/vmx/README.md)
+- [VMX backend source](https://github.com/VMXONWPI/allwpilib/tree/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/hal/src/main/native/mau)
+- [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blob/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/vmx/README.md)

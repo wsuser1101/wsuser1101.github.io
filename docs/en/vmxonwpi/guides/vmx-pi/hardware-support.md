@@ -16,3 +16,11 @@ VMX on WPI uses the WPILib 2026 HAL backend for the VMX-pi. Robot code can use W
 The HAL has host-side regression tests, but those do not replace tests with the actual VMX-pi, sensors, motor controllers, and Driver Station. Verify each I/O path and safety behavior on the hardware before using it in a robot.
 
 See the [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blob/main/vmx/README.md) and [GradleRIO VMX-pi deployment notes](https://github.com/VMXONWPI/GradleRIO/blob/main/VMX.md).
+
+## Studica device classes
+
+TitanQuad, TitanQuadEncoder, Cobra, Servo, ServoContinuous and the original
+Studica 360-degree Lidar are implemented in the development-source wpilibc /
+wpilibj libraries. They are not yet part of the current extension release.
+See [Studica APIs](studica-api.md) for supported models, matching libraries,
+C++ / Java examples and hardware verification limits.

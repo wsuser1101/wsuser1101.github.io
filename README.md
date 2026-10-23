@@ -33,7 +33,10 @@ for W4Studica and `apidocs/vmxonwpi/source.json` for VMX on WPI.
 The W4Studica reference includes WPILib public headers, Studica driver headers
 and W4Studica VMX integration headers. The VMX on WPI reference includes the standard WPILib hardware classes
 listed in `VMX_WPILIB_HEADERS`, the HAL headers matching the port's backend
-implementation files, and the extra backend interfaces in `VMX_HEADERS`.
+implementation files, and the extra backend interfaces in `VMX_HEADERS`, and the six Studica device
+headers in `VMX_STUDICA_HEADERS`. The pin currently includes unreleased Studica
+1.1.8 compatibility additions; the displayed version marks this as development
+source rather than a published extension release.
 The API main page distinguishes public robot APIs from backend internals and
 lists unsupported compatibility stubs and partial implementations. General
 WPILib math, NetworkTables and command APIs are outside this focused reference.

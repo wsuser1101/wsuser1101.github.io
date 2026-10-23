@@ -24,6 +24,15 @@ Use these guides for the WPILib 2026 releases from [VMXONWPI](https://github.com
 
 The WPILib version is 2026.2.2. The current VMX GradleRIO and HAL pair is 2026.2.2-vmx.2; the [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases) list the latest VSIX.
 
+## Studica device APIs
+
+The development source now includes TitanQuad, TitanQuadEncoder, Cobra, Servo,
+ServoContinuous and Lidar for C++ and Java. The original `studica` /
+`com.studica.frc` APIs are retained. These additions require matching custom
+libraries and are not yet bundled with the current extension release.
+
+[Studica API setup and examples](guides/vmx-pi/studica-api.md)
+
 ## Project links
 
 - [VMX on WPI C++ API reference](/vmxonwpi/apidocs/) — WPILib hardware APIs with VMX backend implementations, plus VMX-specific channel mapping and Driver Station interfaces. The API overview distinguishes public APIs, backend internals and implementation limits. See [hardware support](guides/vmx-pi/hardware-support.md) for robot I/O capabilities.
