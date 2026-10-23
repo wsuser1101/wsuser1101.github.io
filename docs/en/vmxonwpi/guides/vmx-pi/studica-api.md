@@ -6,14 +6,15 @@ The Studica compatibility implementation retains the C++ `studica` namespace,
 Java `com.studica.frc` package, class names and methods. Standard WPILib APIs
 continue to use `frc` / `frc2` or `edu.wpi.first.wpilibj`.
 
-!!! info "Development-source additions"
-    These Studica classes are not yet included in the published `2026.2.2-vmx.2`
-    release or the current VMX2026 extension. Build matching custom wpilibc,
-    wpilibj, HAL and HAL JNI libraries from the development source. Installing
-    the existing extension alone does not add these classes.
+!!! info "Available in allwpilib 2026.2.2-vmx.3"
+    Install VMX2026 extension **2.0.4 or later**, then run **Update VMX2026 Version**.
+    It selects matching wpilibc, wpilibj, HAL and HAL JNI for the VMX target.
+    GradleRIO remains **2026.2.2-vmx.2**. Remove the old Titan vendor dependency.
+    The custom native libraries target linuxarm64; desktop C++ simulation using
+    these added classes requires a separate build.
 
-[Pinned implementation source](https://github.com/VMXONWPI/allwpilib/tree/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/vmx/studica)
-· [Custom build and project version setup](https://github.com/VMXONWPI/allwpilib/blob/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/vmx/studica/README.md#build-and-distribution)
+[Pinned implementation source](https://github.com/VMXONWPI/allwpilib/tree/df7e6760001e16edba5d2dc44a06329f0961c5f2/vmx/studica)
+· [Custom build and project version setup](https://github.com/VMXONWPI/allwpilib/blob/df7e6760001e16edba5d2dc44a06329f0961c5f2/vmx/studica/README.md#build-and-distribution)
 
 ## Available classes
 
@@ -29,7 +30,7 @@ continue to use `frc` / `frc2` or `edu.wpi.first.wpilibj`.
 ## Prepare the project
 
 1. Install [WPILib 2026 and VMX2026](software-install.md) and [select the VMX-pi deploy target](vmx2026-setup.md).
-2. Follow the implementation's build guide to prepare matching custom wpilibc, wpilibj, HAL and HAL JNI libraries and select their versions in the project. Robot native code targets `linuxarm64`.
+2. Install VMX2026 **2.0.4 or later** and run **Update VMX2026 Version** to select allwpilib **2026.2.2-vmx.3**. Robot native code targets `linuxarm64`.
 3. Remove the old Titan 1.1.8 vendor dependency and rebuild. Do not add the old JAR or native library alongside the new classes.
 
 The classes are part of this fork's wpilibc and wpilibj. They do not load the

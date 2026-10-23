@@ -19,8 +19,8 @@ HAL에는 호스트 회귀 테스트가 있지만 실제 VMX-pi, 센서, 모터 
 
 ## Studica 장치 클래스
 
-개발 소스의 wpilibc / wpilibj에는 TitanQuad, TitanQuadEncoder, Cobra, Servo,
+allwpilib 2026.2.2-vmx.3의 wpilibc / wpilibj에는 TitanQuad, TitanQuadEncoder, Cobra, Servo,
 ServoContinuous, 원래 Studica 360도 Lidar 구현이 추가되어 있습니다.
-현재 확장 프로그램 릴리스에는 아직 포함되지 않았습니다.
+VMX2026 2.0.4에서 Update VMX2026 Version을 실행해 설치하세요.
 지원 모델, 일치하는 라이브러리, C++·Java 예제와 하드웨어 검증 범위는
 [Studica API 사용법](studica-api.md)을 참고하세요.

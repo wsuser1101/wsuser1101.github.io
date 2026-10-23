@@ -5,10 +5,13 @@
 <h1>VMX on WPI Java API</h1>
 <p>Java hardware APIs for the VMX-pi port of WPILib 2026, including the
 original <code>com.studica.frc</code> device API.</p>
-<h2>Development source</h2>
-<p>The Studica additions are not yet included in the published 2026.2.2-vmx.2
-release or current VMX2026 extension. Build matching wpilibj, HAL and HAL JNI
-from the pinned source. Do not add the old Titan 1.1.8 JAR alongside these classes.
+<h2>Install the matching release</h2>
+<p>Included in <strong>allwpilib 2026.2.2-vmx.3</strong>. Install VMX2026 extension
+<strong>2.0.4 or later</strong> and run <strong>Update VMX2026 Version</strong>.
+It selects matching wpilibc, wpilibj, HAL and HAL JNI with GradleRIO
+2026.2.2-vmx.2. Remove the old Titan vendor dependency.
+Native Studica libraries target linuxarm64; desktop C++ simulation requires
+a separate platform build. Java serial/DTR needs the matching robot-side JNI.
 See the <a href="/vmxonwpi/guides/vmx-pi/studica-api/">setup guide and Java examples</a>
 or <a href="/ko/vmxonwpi/guides/vmx-pi/studica-api/">한국어 안내</a>.</p>
 <h2>Studica device APIs</h2>

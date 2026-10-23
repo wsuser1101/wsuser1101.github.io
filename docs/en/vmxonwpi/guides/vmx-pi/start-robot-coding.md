@@ -37,4 +37,4 @@ For setup and deployment details, see [Connect a Project to VMX-Pi](vmx2026-setu
 
 For Titan motors, Titan encoders, Cobra, Studica servos and the original 360-degree
 LiDAR, see [Studica APIs](studica-api.md). The guide includes C++ and Java
-examples and explains which matching development libraries are required.
+examples and explains which matching release libraries are required.

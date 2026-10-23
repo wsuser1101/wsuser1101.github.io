@@ -2,10 +2,13 @@
 
 **WPILib APIs with VMX implementations · Studica 1.1.8 compatibility**
 
-The Studica classes below are development-source additions on top of the
-2026.2.2-vmx.2 base release. They are not yet included in that published release
-or the current extension package. See the [Studica API setup guide](/vmxonwpi/guides/vmx-pi/studica-api/)
-for matching library requirements and C++ / Java examples.
+The Studica classes below are included in **allwpilib 2026.2.2-vmx.3**.
+Install **VMX2026 extension 2.0.4 or later** and run **Update VMX2026 Version**
+to select matching wpilibc, wpilibj, HAL and HAL JNI with GradleRIO 2026.2.2-vmx.2.
+Remove the old Titan vendor dependency. Native Studica artifacts target
+linuxarm64; desktop C++ simulation with these classes needs a separate build.
+See the [Studica API setup guide](/vmxonwpi/guides/vmx-pi/studica-api/)
+for C++ / Java examples and hardware verification limits.
 
 This reference covers both **standard WPILib hardware APIs implemented by the
 VMX-pi port** and **VMX-specific interfaces added by the port**. An API does not
@@ -106,5 +109,5 @@ acquire their own API pages here.
 - [VMX on WPI guides](/vmxonwpi/)
 - [한국어 안내](/ko/vmxonwpi/)
 - [Hardware support](/vmxonwpi/guides/vmx-pi/hardware-support/)
-- [VMX backend source](https://github.com/VMXONWPI/allwpilib/tree/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/hal/src/main/native/mau)
-- [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blob/45be4e5c8ef3e6a97a8df2377e2b42c967de7201/vmx/README.md)
+- [VMX backend source](https://github.com/VMXONWPI/allwpilib/tree/df7e6760001e16edba5d2dc44a06329f0961c5f2/hal/src/main/native/mau)
+- [VMX HAL implementation notes](https://github.com/VMXONWPI/allwpilib/blob/df7e6760001e16edba5d2dc44a06329f0961c5f2/vmx/README.md)
