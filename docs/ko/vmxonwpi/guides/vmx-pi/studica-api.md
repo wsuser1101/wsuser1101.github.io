@@ -6,8 +6,8 @@ VMX on WPI의 Studica 호환 구현은 기존 C++ `studica` 네임스페이스�
 `com.studica.frc` 패키지의 클래스명·메서드를 유지합니다. 일반 WPILib API는
 계속 `frc` / `frc2` 또는 `edu.wpi.first.wpilibj`를 사용합니다.
 
-!!! info "allwpilib 2026.2.2-vmx.4부터 제공"
-    VMX2026 확장 프로그램 **2.0.5 이상**을 설치하고 **Update VMX2026 Version**을 실행하세요.
+!!! info "allwpilib 2026.2.2-vmx.5부터 제공"
+    VMX2026 확장 프로그램 **2.0.6 이상**을 설치하고 **Update VMX2026 Version**을 실행하세요.
     VMX 대상에 일치하는 wpilibc, wpilibj, HAL, HAL JNI를 자동으로 선택합니다.
     GradleRIO는 **2026.2.2-vmx.2**를 사용합니다. 이전 Titan 벤더 의존성은 제거하세요.
     커스텀 네이티브 라이브러리는 linuxarm64용이며, 새 클래스를 사용하는 데스크톱
@@ -30,7 +30,7 @@ VMX on WPI의 Studica 호환 구현은 기존 C++ `studica` 네임스페이스�
 ## 프로젝트 준비
 
 1. 개발 컴퓨터에 [WPILib 2026과 VMX2026](software-install.md)을 준비하고 프로젝트의 배포 대상을 [VMX-pi로 설정](vmx2026-setup.md)합니다.
-2. VMX2026 **2.0.5 이상**에서 **Update VMX2026 Version**을 실행해 allwpilib **2026.2.2-vmx.4**을 선택합니다. 로봇용 네이티브 대상은 `linuxarm64`입니다.
+2. VMX2026 **2.0.6 이상**에서 **Update VMX2026 Version**을 실행해 allwpilib **2026.2.2-vmx.5**을 선택합니다. 로봇용 네이티브 대상은 `linuxarm64`입니다.
 3. 이전 Titan 1.1.8 벤더 의존성은 제거하고 프로젝트를 다시 빌드합니다. 이전 JAR·네이티브 라이브러리와 새 클래스를 함께 추가하지 마세요.
 
 클래스는 이 포크의 wpilibc와 wpilibj에 포함됩니다. 별도의 기존 `TitanDriver`

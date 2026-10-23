@@ -1,7 +1,7 @@
 {
   "repository": "VMXONWPI/allwpilib",
-  "ref": "2a7f01cbb8443e190dda246fb4006e5ca8f589a7",
-  "version": "2026.2.2-vmx.4",
-  "baseRelease": "2026.2.2-vmx.4",
+  "ref": "e1dd4212a14ac8a4c0d563b8d5255ee9ec4ae115",
+  "version": "2026.2.2-vmx.5",
+  "baseRelease": "2026.2.2-vmx.5",
   "status": "released"
 }

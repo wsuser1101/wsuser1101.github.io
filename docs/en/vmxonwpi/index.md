@@ -23,13 +23,13 @@ Use these guides for the WPILib 2026 releases from [VMXONWPI](https://github.com
 4. [Connect a WPILib project to the VMX-pi](guides/vmx-pi/vmx2026-setup.md) and deploy.
 5. Review [hardware support](guides/vmx-pi/hardware-support.md) before connecting robot hardware.
 
-The WPILib version is 2026.2.2. Use GradleRIO 2026.2.2-vmx.2 with allwpilib/HAL 2026.2.2-vmx.4 and VMX2026 2.0.5; the [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases) list the latest VSIX.
+The WPILib version is 2026.2.2. Use GradleRIO 2026.2.2-vmx.2 with allwpilib/HAL 2026.2.2-vmx.5 and VMX2026 2.0.6; the [VMX2026 extension releases](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases) list the latest VSIX.
 
 ## Studica device APIs
 
-allwpilib 2026.2.2-vmx.4 includes TitanQuad, TitanQuadEncoder, Cobra, Servo,
+allwpilib 2026.2.2-vmx.5 includes TitanQuad, TitanQuadEncoder, Cobra, Servo,
 ServoContinuous and Lidar for C++ and Java. The original `studica` /
-`com.studica.frc` APIs are retained. Install VMX2026 2.0.5 and run Update VMX2026 Version to select the matching libraries.
+`com.studica.frc` APIs are retained. Install VMX2026 2.0.6 and run Update VMX2026 Version to select the matching libraries.
 
 [Studica API setup and examples](guides/vmx-pi/studica-api.md)
 

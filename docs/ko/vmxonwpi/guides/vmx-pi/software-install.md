@@ -12,7 +12,7 @@ title: WPILib 및 VMX2026 설치
 
 ## VMX2026 확장 프로그램 설치
 
-VMX2026 확장 프로그램 릴리스 페이지에서 최신 `.vsix` 파일을 내려받으세요. 현재 릴리스는 **2.0.5**입니다.
+VMX2026 확장 프로그램 릴리스 페이지에서 최신 `.vsix` 파일을 내려받으세요. 현재 릴리스는 **2.0.6**입니다.
 
 [VMX2026 확장 프로그램 릴리스](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)
 
@@ -30,7 +30,7 @@ sudo apt install openjdk-17-jre-headless
 
 ## Studica 호환 API
 
-VMX2026 **2.0.5**에서 allwpilib **2026.2.2-vmx.4**의 Studica 1.1.8 호환
+VMX2026 **2.0.6**에서 allwpilib **2026.2.2-vmx.5**의 Studica 1.1.8 호환
 클래스를 설치할 수 있습니다. **Update VMX2026 Version**을 실행하면 wpilibc,
 wpilibj, HAL, HAL JNI를 함께 선택합니다. 이전 Titan 벤더 의존성은 제거하세요.
 예제와 플랫폼 제한은 [Studica API 설정](studica-api.md)을 확인하세요.
