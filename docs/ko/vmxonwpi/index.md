@@ -23,13 +23,13 @@ VMX-Pi on WPILib은 Studica VMX-pi를 WPILib 2026 개발 흐름에서 사용할 
 4. [WPILib 프로젝트를 VMX-pi에 연결](guides/vmx-pi/vmx2026-setup.md)하고 배포합니다.
 5. 로봇 하드웨어를 연결하기 전에 [하드웨어 지원 범위](guides/vmx-pi/hardware-support.md)를 확인합니다.
 
-WPILib 버전은 2026.2.2입니다. GradleRIO 2026.2.2-vmx.2, allwpilib/HAL 2026.2.2-vmx.5, VMX2026 2.0.6를 함께 사용합니다. 최신 VSIX는 [VMX2026 확장 프로그램 릴리스](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)에서 확인하세요.
+WPILib 버전은 2026.2.2입니다. GradleRIO 2026.2.2-vmx.2, allwpilib/HAL 2026.2.2-vmx.6, VMX2026 2.0.7를 함께 사용합니다. 최신 VSIX는 [VMX2026 확장 프로그램 릴리스](https://github.com/VMXONWPI/VMX2026VSCodeExtension/releases)에서 확인하세요.
 
 ## Studica 장치 API
 
-allwpilib 2026.2.2-vmx.5에 TitanQuad, TitanQuadEncoder, Cobra, Servo, ServoContinuous,
+allwpilib 2026.2.2-vmx.6에 TitanQuad, TitanQuadEncoder, Cobra, Servo, ServoContinuous,
 Lidar의 C++·Java 구현이 추가되었습니다. 기존 `studica` / `com.studica.frc`
-API를 유지합니다. VMX2026 2.0.6에서 Update VMX2026 Version을 실행해 설치하세요.
+API를 유지합니다. VMX2026 2.0.7에서 Update VMX2026 Version을 실행해 설치하세요.
 
 [Studica API 설정 및 사용 예제](guides/vmx-pi/studica-api.md)
 
