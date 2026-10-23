@@ -9,6 +9,7 @@ hide:
 **WPILib 2026 · C++ 및 Java**
 
 [C++ API](/vmxonwpi/apidocs/){ .md-button }
+[Java API](/vmxonwpi/javadocs/){ .md-button }
 
 VMX-Pi on WPILib은 Studica VMX-pi를 WPILib 2026 개발 흐름에서 사용할 수 있게 합니다. 64비트 Linux용 VMX-pi HAL, GradleRIO `VmxPi` 배포 대상, VMX2026 VS Code 확장 프로그램, NetworkManager 기반 Robot Manager를 제공합니다.
 

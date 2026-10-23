@@ -39,6 +39,7 @@ nav:
       - Hardware Support: vmxonwpi/guides/vmx-pi/hardware-support.md
       - Troubleshooting: vmxonwpi/guides/vmx-pi/troubleshooting.md
       - C++ API: /vmxonwpi/apidocs/
+      - Java API: /vmxonwpi/javadocs/
   - W4Studica:
       - Introduction: W4Studica/index.md
       - VMX-Pi Setup: W4Studica/guides/vmx-pi/vmx-pi-setup.md
@@ -104,6 +105,7 @@ plugins:
             Software Install: 소프트웨어 설치
             Adding W4Studica Libraries: W4Studica 라이브러리 추가
             C++ API: C++ API 문서
+            Java API: Java API 문서
             Install WPILib and VMX2026: WPILib 및 VMX2026 설치
             VS Code Setup: VS Code 설정
             Connect a Project to VMX-Pi: 프로젝트를 VMX-Pi에 연결

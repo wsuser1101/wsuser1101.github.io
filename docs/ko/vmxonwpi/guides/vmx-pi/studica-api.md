@@ -17,14 +17,14 @@ VMX on WPI의 Studica 호환 구현은 기존 C++ `studica` 네임스페이스�
 
 ## 제공하는 클래스
 
-| 클래스 | 기능 | C++ API |
-|---|---|---|
-| `TitanQuad` | CAN ID 1~63, 모터 채널 0~3, 속도·반전·리미트 스위치·상태 조회 | [TitanQuad](/vmxonwpi/apidocs/classstudica_1_1TitanQuad.html) |
-| `TitanQuadEncoder` | 엔코더 카운트·초기화·거리·방향·RPM 조회 | [TitanQuadEncoder](/vmxonwpi/apidocs/classstudica_1_1TitanQuadEncoder.html) |
-| `Cobra` | MXP I2C `0x48`의 ADS1015, 아날로그 채널 0~3 | [Cobra](/vmxonwpi/apidocs/classstudica_1_1Cobra.html) |
-| `Servo` | 0~300도 위치 제어, 500~2500 μs PWM | [Servo](/vmxonwpi/apidocs/classstudica_1_1Servo.html) |
-| `ServoContinuous` | 연속 회전 서보, 1500 μs 중립 | [ServoContinuous](/vmxonwpi/apidocs/classstudica_1_1ServoContinuous.html) |
-| `Lidar` | 원래 Studica 360도 모델, 각도·거리 360개 | [Lidar](/vmxonwpi/apidocs/classstudica_1_1Lidar.html) |
+| 클래스 | 기능 | C++ API | Java API |
+|---|---|---|---|
+| `TitanQuad` | CAN ID 1~63, 모터 채널 0~3, 속도·반전·리미트 스위치·상태 조회 | [TitanQuad](/vmxonwpi/apidocs/classstudica_1_1TitanQuad.html) | [TitanQuad](/vmxonwpi/javadocs/com/studica/frc/TitanQuad.html) |
+| `TitanQuadEncoder` | 엔코더 카운트·초기화·거리·방향·RPM 조회 | [TitanQuadEncoder](/vmxonwpi/apidocs/classstudica_1_1TitanQuadEncoder.html) | [TitanQuadEncoder](/vmxonwpi/javadocs/com/studica/frc/TitanQuadEncoder.html) |
+| `Cobra` | MXP I2C `0x48`의 ADS1015, 아날로그 채널 0~3 | [Cobra](/vmxonwpi/apidocs/classstudica_1_1Cobra.html) | [Cobra](/vmxonwpi/javadocs/com/studica/frc/Cobra.html) |
+| `Servo` | 0~300도 위치 제어, 500~2500 μs PWM | [Servo](/vmxonwpi/apidocs/classstudica_1_1Servo.html) | [Servo](/vmxonwpi/javadocs/com/studica/frc/Servo.html) |
+| `ServoContinuous` | 연속 회전 서보, 1500 μs 중립 | [ServoContinuous](/vmxonwpi/apidocs/classstudica_1_1ServoContinuous.html) | [ServoContinuous](/vmxonwpi/javadocs/com/studica/frc/ServoContinuous.html) |
+| `Lidar` | 원래 Studica 360도 모델, 각도·거리 360개 | [Lidar](/vmxonwpi/apidocs/classstudica_1_1Lidar.html) | [Lidar](/vmxonwpi/javadocs/com/studica/frc/Lidar.html) |
 
 ## 프로젝트 준비
 

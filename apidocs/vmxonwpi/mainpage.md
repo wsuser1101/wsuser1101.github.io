@@ -17,7 +17,8 @@ Use **Classes**, **Namespaces**, **Files**, or search to find an interface.
 ## Studica device APIs
 
 The original C++ `studica` namespace and `#include <studica/...>` paths are
-retained. Java uses `com.studica.frc`; see the [Java usage guide](/vmxonwpi/guides/vmx-pi/studica-api/#java).
+retained. Java uses `com.studica.frc`; see the [Java API reference](/vmxonwpi/javadocs/)
+and [Java usage guide](/vmxonwpi/guides/vmx-pi/studica-api/#java).
 
 | Device | C++ reference | Notes |
 | --- | --- | --- |

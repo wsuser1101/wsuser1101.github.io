@@ -1,0 +1,52 @@
+[
+  {
+    "file": "wpilibj-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/wpilibj/wpilibj-java/2026.2.2/wpilibj-java-2026.2.2.jar",
+    "sha256": "f482449e7e251ca3c6a484513d4767e0d382cc75f0e52d1d1b3ddc4370a53b69"
+  },
+  {
+    "file": "hal-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/hal/hal-java/2026.2.2/hal-java-2026.2.2.jar",
+    "sha256": "62b4007808aa0a0635a9d60f09855a139e67c1bc8fb551c8ae696db21e0847b5"
+  },
+  {
+    "file": "wpiutil-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/wpiutil/wpiutil-java/2026.2.2/wpiutil-java-2026.2.2.jar",
+    "sha256": "54fb1c0e76edc171330feb1e1afbbf7fffbbc83de736052104a4623c0a8c8712"
+  },
+  {
+    "file": "wpiunits-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/wpiunits/wpiunits-java/2026.2.2/wpiunits-java-2026.2.2.jar",
+    "sha256": "1453c202da01d95c390b37975fea74449e8d2e8f4843171b327b782c41d5d66a"
+  },
+  {
+    "file": "wpimath-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/wpimath/wpimath-java/2026.2.2/wpimath-java-2026.2.2.jar",
+    "sha256": "e9b927562272499d50fbbeb3041ceacf956302d75f281d099e009971ac74d709"
+  },
+  {
+    "file": "ntcore-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/ntcore/ntcore-java/2026.2.2/ntcore-java-2026.2.2.jar",
+    "sha256": "10959c3a6db310d394f1f5dfbcf72fdee5e0543bc4798b56b5a03c83ad41b354"
+  },
+  {
+    "file": "wpinet-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/wpinet/wpinet-java/2026.2.2/wpinet-java-2026.2.2.jar",
+    "sha256": "6d9a9d196dfa0b607c7e1f8b49fc7785ac0ebe72681d5afc767a36b09168be40"
+  },
+  {
+    "file": "cscore-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/cscore/cscore-java/2026.2.2/cscore-java-2026.2.2.jar",
+    "sha256": "61f1a1776a9d148b0851441f92de2b54129adcf3f98bd758e4b8f9bb5704a9b9"
+  },
+  {
+    "file": "cameraserver-java-2026.2.2.jar",
+    "url": "https://frcmaven.wpi.edu/artifactory/api/download/release/edu/wpi/first/cameraserver/cameraserver-java/2026.2.2/cameraserver-java-2026.2.2.jar",
+    "sha256": "ff4c28f7b43db762936f64911b9af4a31cc4a850644c05a27f3fdc006e842fa4"
+  },
+  {
+    "file": "jackson-annotations-2.19.2.jar",
+    "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar",
+    "sha256": "e516743a316dcf83c572ffc9cb6e8c5e8c134880c8c5155b02f7b34e9c5dc3cf"
+  }
+]

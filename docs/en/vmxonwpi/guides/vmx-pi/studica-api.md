@@ -17,14 +17,14 @@ continue to use `frc` / `frc2` or `edu.wpi.first.wpilibj`.
 
 ## Available classes
 
-| Class | Function | C++ API |
-|---|---|---|
-| `TitanQuad` | CAN ID 1..63, motor channel 0..3, speed, inversion, limit switches and status | [TitanQuad](/vmxonwpi/apidocs/classstudica_1_1TitanQuad.html) |
-| `TitanQuadEncoder` | Signed counts, reset, distance, direction and RPM | [TitanQuadEncoder](/vmxonwpi/apidocs/classstudica_1_1TitanQuadEncoder.html) |
-| `Cobra` | ADS1015 at MXP I2C address `0x48`, channels 0..3 | [Cobra](/vmxonwpi/apidocs/classstudica_1_1Cobra.html) |
-| `Servo` | 0..300 degrees, 500..2500 microsecond PWM | [Servo](/vmxonwpi/apidocs/classstudica_1_1Servo.html) |
-| `ServoContinuous` | Continuous-rotation servo, 1500 microsecond neutral | [ServoContinuous](/vmxonwpi/apidocs/classstudica_1_1ServoContinuous.html) |
-| `Lidar` | Original Studica 360-degree model, 360 angle/distance entries | [Lidar](/vmxonwpi/apidocs/classstudica_1_1Lidar.html) |
+| Class | Function | C++ API | Java API |
+|---|---|---|---|
+| `TitanQuad` | CAN ID 1..63, motor channel 0..3, speed, inversion, limit switches and status | [TitanQuad](/vmxonwpi/apidocs/classstudica_1_1TitanQuad.html) | [TitanQuad](/vmxonwpi/javadocs/com/studica/frc/TitanQuad.html) |
+| `TitanQuadEncoder` | Signed counts, reset, distance, direction and RPM | [TitanQuadEncoder](/vmxonwpi/apidocs/classstudica_1_1TitanQuadEncoder.html) | [TitanQuadEncoder](/vmxonwpi/javadocs/com/studica/frc/TitanQuadEncoder.html) |
+| `Cobra` | ADS1015 at MXP I2C address `0x48`, channels 0..3 | [Cobra](/vmxonwpi/apidocs/classstudica_1_1Cobra.html) | [Cobra](/vmxonwpi/javadocs/com/studica/frc/Cobra.html) |
+| `Servo` | 0..300 degrees, 500..2500 microsecond PWM | [Servo](/vmxonwpi/apidocs/classstudica_1_1Servo.html) | [Servo](/vmxonwpi/javadocs/com/studica/frc/Servo.html) |
+| `ServoContinuous` | Continuous-rotation servo, 1500 microsecond neutral | [ServoContinuous](/vmxonwpi/apidocs/classstudica_1_1ServoContinuous.html) | [ServoContinuous](/vmxonwpi/javadocs/com/studica/frc/ServoContinuous.html) |
+| `Lidar` | Original Studica 360-degree model, 360 angle/distance entries | [Lidar](/vmxonwpi/apidocs/classstudica_1_1Lidar.html) | [Lidar](/vmxonwpi/javadocs/com/studica/frc/Lidar.html) |
 
 ## Prepare the project
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>VMX on WPI Java API</title></head>
+<body>
+<h1>VMX on WPI Java API</h1>
+<p>Java hardware APIs for the VMX-pi port of WPILib 2026, including the
+original <code>com.studica.frc</code> device API.</p>
+<h2>Development source</h2>
+<p>The Studica additions are not yet included in the published 2026.2.2-vmx.2
+release or current VMX2026 extension. Build matching wpilibj, HAL and HAL JNI
+from the pinned source. Do not add the old Titan 1.1.8 JAR alongside these classes.
+See the <a href="/vmxonwpi/guides/vmx-pi/studica-api/">setup guide and Java examples</a>
+or <a href="/ko/vmxonwpi/guides/vmx-pi/studica-api/">한국어 안내</a>.</p>
+<h2>Studica device APIs</h2>
+<ul>
+<li>{@link com.studica.frc.TitanQuad}: CAN ID 1–63, motor channels 0–3.
+Refresh <code>set()</code> within 100 ms. Commands require an attached,
+enabled Driver Station without E-stop. Disabled or expired commands are cleared.</li>
+<li>{@link com.studica.frc.TitanQuadEncoder}: signed counts, distance per tick,
+direction and shaft RPM. Speed is RPM, not distance per second.</li>
+<li>{@link com.studica.frc.Cobra}: four ADS1015 analog channels on MXP I2C,
+address 0x48.</li>
+<li>{@link com.studica.frc.Servo}: positional servo, 0–300 degrees,
+500–2500 microsecond PWM.</li>
+<li>{@link com.studica.frc.ServoContinuous}: continuous servo,
+1500 microsecond neutral.</li>
+<li>{@link com.studica.frc.Lidar}: original 360-degree non-intensity triangle
+protocol at 128000 baud, not T-Mini. Provide separate angle and distance arrays
+of at least 360 floats; angles are degrees, distances mm, missing rays NaN.
+A scan times out after one second.</li>
+</ul>
+<p>The original public Java method signatures are retained through source
+compatibility adapters. Recompile robot programs with the new libraries.
+The old TitanDriver JNI library is not required. Actual hardware behavior
+remains to be verified.</p>
+<h2>WPILib APIs backed by VMX</h2>
+<p>The <code>edu.wpi.first.wpilibj</code> packages include the hardware API
+counterparts of the <a href="/vmxonwpi/apidocs/">C++ reference</a>:
+digital and analog I/O, encoders, PWM, I2C, SPI, serial, interrupts, timing,
+Driver Station, CAN and pneumatics. General math, commands and NetworkTables
+APIs are outside this focused reference.</p>
+<p>These classes keep standard WPILib API comments. Inclusion does not imply
+that every operation is implemented on VMX. Apply the
+<a href="/vmxonwpi/guides/vmx-pi/hardware-support/">VMX hardware limits</a>:
+SPI automatic transfers and averaged/filtered analog triggers are unsupported;
+onboard acceleration has a fixed 2G range. RoboRIO rails and radio LEDs have
+no equivalent VMX hardware behavior. Device and channel capabilities require
+verification on the robot.</p>
+<p>Java calls the VMX HAL through JNI. C++ backend internals and HAL declarations
+are documented in the C++ reference. Package-private transport and parser
+helpers are intentionally excluded here.</p>
+</body>
+</html>
