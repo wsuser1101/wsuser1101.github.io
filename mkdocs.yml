@@ -1,0 +1,104 @@
+site_name: W4Studica
+site_url: https://wsuser1101.github.io/
+site_description: A community project bringing 2027 WPILib to the Studica VMX-pi.
+
+theme:
+  name: material
+  logo: assets/w4studica-icon.svg
+  favicon: assets/w4studica-icon.png
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - navigation.top
+    - content.code.copy
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Introduction: index.md
+  - Documentation:
+      - VMX-Pi Setup: guides/vmx-pi/vmx-pi-setup.md
+      - VMX-Pi Network: guides/vmx-pi/vmx-pi-network.md
+      - Software Install: guides/vmx-pi/software-install.md
+      - VS Code Setup: guides/vmx-pi/vscode-setup.md
+      - Adding W4Studica Libraries: guides/vmx-pi/adding-w4studica-libraries.md
+      - Start Robot Coding: guides/vmx-pi/start-robot-coding.md
+      - Hardware Support: guides/vmx-pi/hardware-support.md
+      - Troubleshooting: guides/vmx-pi/troubleshooting.md
+      - WPILib Official Documentation: https://docs.wpilib.org/en/2027/
+      - Studica Official Documentation: https://learn.studica.com/
+  - C++ API: https://wsuser1101.github.io/apidocs/
+  - GitHub: https://github.com/W4Studica
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: false
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+          site_name: W4Studica
+          site_description: A community project bringing 2027 WPILib to the Studica VMX-pi.
+        - locale: ko
+          name: 한국어
+          build: true
+          theme:
+            language: ko
+            palette:
+              - media: "(prefers-color-scheme: light)"
+                scheme: default
+                toggle:
+                  icon: material/weather-night
+                  name: 어두운 모드로 전환
+              - media: "(prefers-color-scheme: dark)"
+                scheme: slate
+                toggle:
+                  icon: material/weather-sunny
+                  name: 밝은 모드로 전환
+          site_name: W4Studica
+          site_description: Studica VMX-pi에서 2027 WPILib을 사용하기 위한 커뮤니티 프로젝트.
+          nav_translations:
+            Introduction: 소개
+            Documentation: 문서
+            VMX-Pi Setup: VMX-Pi 설정
+            VMX-Pi Network: VMX-Pi 네트워크
+            Software Install: 소프트웨어 설치
+            VS Code Setup: VS Code 설정
+            Adding W4Studica Libraries: W4Studica 라이브러리 추가
+            Start Robot Coding: 로봇 코딩 시작하기
+            Hardware Support: 하드웨어 지원
+            Troubleshooting: 문제 해결
+            WPILib Official Documentation: WPILib 공식 문서
+            Studica Official Documentation: Studica 공식 문서
+            C++ API: C++ API 문서

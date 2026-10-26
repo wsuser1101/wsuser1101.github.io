@@ -1,0 +1,70 @@
+.md-typeset img {
+  border-radius: 12px;
+}
+
+/* Page titles: heavier and smaller than the thin default. */
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1em;
+}
+.md-typeset h2 {
+  font-weight: 650;
+  margin-top: 2.2em;
+}
+.md-typeset {
+  line-height: 1.75;
+}
+
+/* Landing page. */
+.hero {
+  padding: 1.5rem 1rem 1.5rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 0.3em;
+}
+.hero p {
+  color: var(--md-default-fg-color--light);
+  font-size: 1.05rem;
+  margin: 0 auto 1.4rem;
+  max-width: 34rem;
+}
+.hero .md-button {
+  margin: 0.25rem 0.3rem;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 12px;
+  padding: 0.4rem 0.9rem;
+}
+.md-typeset .grid.cards > ul > li p {
+  margin: 0.5em 0;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+}
+
+.md-content__inner {
+  margin-bottom: 3rem;
+}
+
+/* Readable outline button on the dark theme. */
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary) {
+  border-color: #8c9eff;
+  color: #8c9eff;
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary):hover {
+  background-color: #8c9eff;
+  color: #1a1b26;
+}
+
+/* Setting names in tables stay in one piece; a wide table scrolls instead. */
+.md-typeset table:not([class]) code {
+  white-space: nowrap;
+}

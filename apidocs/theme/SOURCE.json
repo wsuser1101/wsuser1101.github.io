@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/jothepro/doxygen-awesome-css",
+  "version": "2.5.0",
+  "commit": "46483f1e5a70ffb9ecd3b82d0a1cd1b24edf13da",
+  "layout": "base",
+  "license": "MIT",
+  "sha256": {
+    "doxygen-awesome.css": "ea37516ec7a7a7780719b9d9a285fe3268a8d5411523d8b93af98d77e67cd1a1",
+    "doxygen-awesome-darkmode-toggle.js": "11951aeb28a182af457a354073b8c05c9bb3c39121e5704e44eabaca8d86d5ff",
+    "doxygen-awesome-paragraph-link.js": "fb6fd1075dedc8cada45dc522e0d206acc72e8cd1a3452ea03905a3e942c5795",
+    "LICENSE": "e3da754c3f657cc78594fa2e8a3283665f78c743df2485fa9e498a8973051191"
+  }
+}

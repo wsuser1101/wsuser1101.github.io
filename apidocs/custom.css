@@ -1,0 +1,17 @@
+/* W4Studica branding over the Doxygen Awesome base layout. */
+html {
+  --primary-color: #2563eb;
+  --primary-dark-color: #1d4ed8;
+  --primary-light-color: #93c5fd;
+  --border-radius-small: 4px;
+}
+
+html.dark-mode {
+  --primary-color: #79b1ff;
+  --primary-dark-color: #a8ccff;
+  --primary-light-color: #2563eb;
+}
+
+#projectname { font-weight: 650; }
+#projectbrief { letter-spacing: 0.015em; }
+.projectnumber { font-size: 0.45em; }

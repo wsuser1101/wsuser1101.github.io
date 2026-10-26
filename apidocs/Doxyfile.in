@@ -1,0 +1,65 @@
+PROJECT_NAME           = "W4Studica C++ API"
+PROJECT_NUMBER         = @VERSION@
+PROJECT_BRIEF          = "WPILib · Studica Drivers · VMX"
+OUTPUT_DIRECTORY       = @BUILD_DIRECTORY@
+OUTPUT_LANGUAGE        = English
+INPUT                  = @INPUT@
+FILE_PATTERNS          = *.h *.hpp *.md
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = NO
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = @STRIP_PATHS@
+STRIP_FROM_INC_PATH    = @STRIP_PATHS@
+USE_MDFILE_AS_MAINPAGE = @MAINPAGE@
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_HEADER            = @HEADER@
+HTML_EXTRA_STYLESHEET  = @STYLESHEETS@
+HTML_EXTRA_FILES       = @EXTRA_FILES@
+HTML_COLORSTYLE        = LIGHT
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+SEARCHENGINE           = YES
+SERVER_BASED_SEARCH    = NO
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+VERBATIM_HEADERS       = YES
+REFERENCED_BY_RELATION = NO
+REFERENCES_RELATION    = NO
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+DOT_GRAPH_MAX_NODES    = 80
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = NO
+INCLUDE_GRAPH          = NO
+INCLUDED_BY_GRAPH      = NO
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_LOGFILE           = @WARNINGS@
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+# Match WPILib's public-header documentation macros.
+PREDEFINED            = __cplusplus DOXYGEN \
+                        "HAL_ENUM(name)=enum name : int32_t" \
+                        WPI_NOEXCEPT:=noexcept WPI_SFINAE(x):= \
+                        WPI_REQUIRES(x):= WPI_REQUIRES_RET(...):= \
+                        WPI_ENABLE_IF(...):= WPI_CONSTEXPR:=constexpr \
+                        WPI_CONSTEXPR_FNC:=constexpr \
+                        WPI_IMPL_DEFINED(...):=implementation_defined WPI_EBO(...):=
+EXPAND_AS_DEFINED     = WPI_ALIAS_TEMPLATE
+JAVADOC_AUTOBRIEF      = YES
+ALIASES               = "effects=\par <i>Effects:</i>^^" \
+                        "returns=\par <i>Returns:</i>^^" \
+                        "notes=\par <i>Notes:</i>^^" \
+                        "throws=\par <i>Throws:</i>^^" \
+                        "requires=\par <i>Requires:</i>^^" \
+                        "requiredbe=\par <i>Required Behavior:</i>^^" \
+                        "defaultbe=\par <i>Default Behavior:</i>^^" \
+                        "Common=\par <b>Common:</b>^^"
