@@ -47,14 +47,15 @@ def main():
         generated = source / module / "src/generated/main/native/include"
         if generated.is_dir():
             inputs.append(generated)
-    inputs += [source / "studica_drivers",
-               source / "simulation/halsim_vmx/src/main/native/include",
-               source / "simulation/halsim_vmx/src/studica/native/include"]
+    vendor = source / "studica/drivers"
+    inputs += [vendor,
+               source / "studica/include",
+               source / "simulation/halsim_studica/src/main/native/include"]
     if any(not path.is_dir() for path in inputs):
         parser.error("Incomplete VMX/Studica public sources")
     # Enumerate public headers: never recurse into Studica's examples or SDK files.
     headers = sorted({p for directory in inputs for pattern in ("*.h", "*.hpp")
-                      for p in (directory.glob(pattern) if directory.name == "studica_drivers"
+                      for p in (directory.glob(pattern) if directory == vendor
                                 else directory.rglob(pattern))})
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".apidocs-", dir=output.parent) as temporary:
